@@ -48,5 +48,20 @@
 
 
 //----------------------------------------------------------------------//
-
+    function register ($u, $p, $fn, $ln, &$t){
+        global $db;
+        
+        $s = "INSERT INTO accounts VALUES('$u', '$fn', '$ln' '$p')";
+        
+        $t = mysqli_query($db, $s) or die(myslqi_error());
+        
+        $num_rows = mysqli_num_rows($t);
+        
+        if ($num_rows>0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 ?>

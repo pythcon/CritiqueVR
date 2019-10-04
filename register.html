@@ -34,13 +34,15 @@
 
       <div id="login">
 
-        <form action="handler.php" method="post">
+        <form action="handler_registration.php" method="post">
 
           <fieldset class="clearfix">
 
-            <p><span class="fontawesome-user"></span><input type="text" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-            <p><input type="submit" value="Sign In"></p>
+            <p><span class="fontawesome-user"></span><input type="text" value="First Name" onBlur="if(this.value == '') this.value = 'First Name'" onFocus="if(this.value == 'First Name') this.value = ''" name="firstname" id="firstname" required></p> 
+            <p><span class="fontawesome-user"></span><input type="text" value="Last Name" onBlur="if(this.value == '') this.value = 'Last Name'" onFocus="if(this.value == 'Last Name') this.value = ''" name="lastname" id="lastname" required></p> 
+            <p><span class="fontawesome-user"></span><input type="text" value="Email" onBlur="if(this.value == '') this.value = 'Email'" onFocus="if(this.value == 'Email') this.value = ''" name="email" id="email" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fontawesome-lock"></span><input type="password"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" name="user" id="pass" required></p> <!-- JS because of IE support; better: placeholder="Password" --> 
+            <p><input type="submit" value="Register"></p>
 
           </fieldset>
 
