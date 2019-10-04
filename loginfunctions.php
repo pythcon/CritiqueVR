@@ -2,10 +2,10 @@
     function getData($name, &$result){
         global $bad;
         global $db;
-        if (!isset ($_GET[ $name ])){
+        if (!isset ($_POST[ $name ])){
             $bad = true;
         }
-        if ($_GET[$name] == ""){
+        if ($_POST[$name] == ""){
             $bad = true;
         }
 
