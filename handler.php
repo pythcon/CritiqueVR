@@ -26,7 +26,7 @@
     $pass = md5($pass);
 
     if (!auth($email, $pass, $t)){
-        redirect("<span style=\"color:red;\">Incorrect Credentials...Redirecting...</span>", "index.html", $delay);
+        redirect("<span style=\"color:red;\">Incorrect Credentials...Redirecting...</span>", "/vr/index.html", $delay);
     }
 //only get here if youre authenticated
     $_SESSION["logged"] = true;
@@ -38,5 +38,5 @@
     $_SESSION["lastname"] = $row["lastname"];
 
 //redirect to dashboard
-    redirect("<span style=\"color:green;\">You have successfully logged in...</span>", "/dashboard.php", $delay);
+    redirect("<span style=\"color:green;\">You have successfully logged in...</span>", "/vr/dashboard.php", $delay);
 ?>

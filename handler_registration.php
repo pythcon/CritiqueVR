@@ -34,6 +34,6 @@ register($email, $firstname, $lastname, $pass, $t);
 echo "
 <script>
     alert(\"Successfully Registered. Please log in.\");
-    window.location.replace(\"/index.html\");
+    window.location.replace(\"/vr/index.html\");
 </script>
 ";
