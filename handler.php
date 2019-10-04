@@ -29,7 +29,7 @@
 //hash password
     $pass = md5($pass);
 
-    if (!auth($user, $pass, $t)){
+    if (!auth($email, $pass, $t)){
         redirect("<span style=\"color:red;\">Incorrect Credentials...Redirecting...</span>", "index.html", $delay);
     }
 //only get here if youre authenticated
