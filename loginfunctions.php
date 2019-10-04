@@ -9,7 +9,7 @@
             $bad = true;
         }
 
-        $result = mysqli_real_escape_string ($db, $_GET[$name]);
+        $result = mysqli_real_escape_string ($db, $_POST[$name]);
     }
 //------------------------------------------------------------------//
     function auth ($u, $p, &$t){
