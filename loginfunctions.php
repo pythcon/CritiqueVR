@@ -50,8 +50,8 @@
 //----------------------------------------------------------------------//
     function register ($u, $p, $fn, $ln, &$t){
         global $db;
-        
-        $s = "INSERT INTO accounts VALUES('$u', '$fn', '$ln' '$p')";
+        $p = md5($p);
+        $s = "INSERT INTO accounts(email, firstname, lastname, password) VALUES('$u', '$fn', '$ln' '$p')";
         
         $t = mysqli_query($db, $s) or die(myslqi_error());
         

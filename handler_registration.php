@@ -36,4 +36,4 @@ echo "
     alert(\"Successfully Registered. Please log in.\");
     window.location.replace(\"/index.html\");
 </script>
-"; 
+";
