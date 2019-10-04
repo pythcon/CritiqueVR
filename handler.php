@@ -2,10 +2,6 @@
     session_start();
     include("account.php");
     include("loginfunctions.php");
-    
-//error reporting code
-    error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-    ini_set('display_errors' , 1);
 
 //DB Connection
     $db = mysqli_connect($hostname, $username, $password, $project);
