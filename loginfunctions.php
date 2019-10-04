@@ -48,7 +48,7 @@
 
 
 //----------------------------------------------------------------------//
-    function register ($u, $p, $fn, $ln, &$t){
+    function register ($u, $fn, $ln, $p, &$t){
         global $db;
         $p = md5($p);
         $s = "INSERT INTO accounts(email, firstname, lastname, password) VALUES('$u', '$fn', '$ln', '$p')";
