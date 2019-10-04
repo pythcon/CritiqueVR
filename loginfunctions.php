@@ -15,7 +15,7 @@
     function auth ($u, $p, &$t){
         global $db;
         
-        $s = "SELECT * FROM accounts WHERE user = '$u' AND pass = '$p'";
+        $s = "SELECT * FROM accounts WHERE email = '$u' AND password = '$p'";
         
         $t = mysqli_query($db, $s) or die("Error Querying Database.");
         
