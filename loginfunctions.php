@@ -51,7 +51,7 @@
     function register ($u, $p, $fn, $ln, &$t){
         global $db;
         $p = md5($p);
-        $s = "INSERT INTO accounts(email, firstname, lastname, password) VALUES('$u', '$fn', '$ln' '$p')";
+        $s = "INSERT INTO accounts(email, firstname, lastname, password) VALUES('$u', '$fn', '$ln', '$p')";
         
         $t = mysqli_query($db, $s) or die("Error Querying Database.");
         
