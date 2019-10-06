@@ -26,8 +26,10 @@
         
         if (reset){
             $s = "SELECT * FROM accounts WHERE (email = '$u' AND resetPassword = '$p') OR (email = '$u' AND password = '$p')";
+            $t = mysqli_query($db, $s) or die("Error Querying Database.");
         }else{
             $s = "SELECT * FROM accounts WHERE email = '$u' AND password = '$p'";
+            $t = mysqli_query($db, $s) or die("Error Querying Database.");
         }
         
         $num_rows = mysqli_num_rows($t);
