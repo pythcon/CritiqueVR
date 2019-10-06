@@ -53,10 +53,12 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100">
+                <div>
+                    <div style="float:left"><a style="font-size: 16px" href="/vr/changepassword.php">Change Password</a></div>
+                    <div style="float:right"><a style="font-size: 20px" href="/vr/logout.php">Logout</a></div>
+                </div>
 				<form class="login100-form validate-form" action="handler.php" method="post">
-					<span class="login100-form-logo">
-						<i class="zmdi zmdi-landscape"></i>
-					</span>
+					
 
                     <?php 
                     //print out name of user
@@ -75,38 +77,14 @@
                     ";
                     ?>
 
-					<div class="wrap-input100 validate-input" data-validate = "Enter email address">
-						<input class="input100" type="text" name="email" placeholder="Email">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
-					</div>
-
-					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Remember me
-						</label>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-
-					<div class="text-center p-t-90">
-						<a class="txt1" href="/vr/forgotpassword.html">
-							Forgot Password?
-						</a>
-                        <br>
-                        <a class="txt1" href="/vr/register.html">
-							Need an Account?
-						</a>
-					</div>
+                    <span class="login100-form-title p-b-34 p-t-27">
+						Welcome ". $firstName. " ". $lastName." 
+                    </span>
+                    <div>
+                        Please select something to do:
+                        
+                    </div>
+                    
 				</form>
 			</div>
 		</div>
