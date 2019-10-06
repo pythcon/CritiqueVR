@@ -58,8 +58,8 @@
 						<i class="zmdi zmdi-landscape"></i>
 					</span>
 
-                    //print out name of user
                     <?php 
+                    //print out name of user
                     $email = $_SESSION['email'];
                     $s = "SELECT * FROM accounts WHERE email = '$email'";
                     $t = mysqli_query($db, $s) or die("Error Querying Database.");
