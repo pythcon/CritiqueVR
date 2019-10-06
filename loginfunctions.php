@@ -118,4 +118,14 @@ function forgotPasswordMailer($email, &$out){
 
 
 }
+function random_pass($length)
+{
+   $string = "";
+   $chars = "abcdefghijklmanopqrstuvwxyz0123456789";
+   $size = strlen($chars);
+   for ($i = 0; $i < $length; $i++) {
+       $string .= $chars[rand(0, $size - 1)];
+   }
+   return $string; 
+}
 ?>
