@@ -27,3 +27,4 @@
 
 //call forgot password function
 forgotPasswordMailer($email, &$out);
+?>

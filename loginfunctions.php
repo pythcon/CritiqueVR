@@ -83,38 +83,38 @@
 function forgotPasswordMailer($email, &$out){
     global $db;
 
-        $s = "SELECT * FROM accounts where email = '$email'";
-        $t = mysqli_query($db,$s) or die( mysqli_error($db));
+    $s = "SELECT * FROM accounts where email = '$email'";
+    $t = mysqli_query($db,$s) or die( mysqli_error($db));
 
-    //Successfully passed all tests:
-        $randompassword = random_pass(6);//randomPassword(6,1,"lower_case");
-        $randompassHashed = md5($randompassword);
+//Successfully passed all tests:
+    $randompassword = random_pass(6);//randomPassword(6,1,"lower_case");
+    $randompassHashed = md5($randompassword);
 
-        $s = "UPDATE accounts SET reset = True, resetPassword = '$randompassHashed' WHERE email = '$email'";
-        mysqli_query ($db, $s) or die (mysqli_error($db));
+    $s = "UPDATE accounts SET reset = True, resetPassword = '$randompassHashed' WHERE email = '$email'";
+    mysqli_query ($db, $s) or die (mysqli_error($db));
 
-        $out = "Password reset was requested.
-        If you did not request this password reset, please log in normally and your account will remain secure.
+    $out = "Password reset was requested.
+    If you did not request this password reset, please log in normally and your account will remain secure.
 
-        ~Your temporary password is: " .$randompassword ."~
+    ~Your temporary password is: " .$randompassword ."~
 
-        When you log in for the first time, please change your password.
+    When you log in for the first time, please change your password.
 
-        Best,
-        ~CritiqueVR Webmaster~";
+    Best,
+    ~CritiqueVR Webmaster~";
 
-        $from = "CritiqueVR Webmaster";
-        $to = $email;
-        $subject = "CritiqueVR Password Reset";
-        $message = $out;
-        $headers = "From:" . $from;
-        mail($to, $subject, $message, $header);
+    $from = "CritiqueVR Webmaster";
+    $to = $email;
+    $subject = "CritiqueVR Password Reset";
+    $message = $out;
+    $headers = "From:" . $from;
+    mail($to, $subject, $message, $header);
 
-        echo"
-        <script>
-            alert(\"Password reset email was sent. Please check your email.\");
-            window.location.replace(\"/vr/index.html\");
-        </script>";
+    echo"
+    <script>
+        alert(\"Password reset email was sent. Please check your email.\");
+        window.location.replace(\"/vr/index.html\");
+    </script>";
 
 
 }
