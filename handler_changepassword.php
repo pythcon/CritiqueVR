@@ -27,6 +27,7 @@
                     window.location.replace(\"/vr/changepassword.php\");
                 </script>
                 ";
+                die();
             }
             $bad = false;
             if (!isset ($pass) || !isset ($pass2)){
