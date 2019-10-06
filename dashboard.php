@@ -72,6 +72,7 @@
 						Welcome ". $firstName. " ". $lastName." 
                     </span>
                     ";
+                    ?>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter email address">
 						<input class="input100" type="text" name="email" placeholder="Email">
