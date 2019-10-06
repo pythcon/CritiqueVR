@@ -55,9 +55,20 @@
 						<i class="zmdi zmdi-landscape"></i>
 					</span>
 
-					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
-					</span>
+                    //print out name of user
+                    <?php 
+                    $s = "SELECT * FROM accounts WHERE email = '$u'";
+                    $t = mysqli_query($db, $s) or die("Error Querying Database.");
+
+                    while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                        $firstName 				= $r[ "firstName" ];
+                        $lastName            	= $r[ "lastName" ];
+                    }
+                    echo"
+                    <span class=\"login100-form-title p-b-34 p-t-27\">
+						Welcome ". $firstName. " ". $lastName." 
+                    </span>
+                    ";
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter email address">
 						<input class="input100" type="text" name="email" placeholder="Email">
