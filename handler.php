@@ -39,7 +39,7 @@
 
 //redirect to dashboard
     if ($reset){
-        redirect("<span style=\"color:green;\">You have successfully logged in... Please reset your password now.</span>", "/vr/dashboard.php", $delay);
+        redirect("<span style=\"color:green;\">You have successfully logged in... Please reset your password now.</span>", "/vr/changepassword.php", $delay);
     }
     else{
         redirect("<span style=\"color:green;\">You have successfully logged in...</span>", "/vr/dashboard.php", $delay);
