@@ -36,8 +36,8 @@
         
         if ($num_rows>0){
             //sets reset to false and deletes temp password
-            $s = "UPDATE accounts SET reset=false, resetPassword=NULL WHERE email='$email'";
-            $t = mysqli_query($db, $s) or die("Error updating reset status.");
+            $s = "UPDATE accounts SET reset=false WHERE email='$email'";
+            mysqli_query($db, $s) or die("Error updating reset status.");
             return true;
         }
         else{
