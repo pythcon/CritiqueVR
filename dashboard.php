@@ -60,7 +60,8 @@
 
                     //print out name of user
                     <?php 
-                    $s = "SELECT * FROM accounts WHERE email = '$u'";
+                    $email = $_SESSION['email'];
+                    $s = "SELECT * FROM accounts WHERE email = '$email'";
                     $t = mysqli_query($db, $s) or die("Error Querying Database.");
 
                     while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
