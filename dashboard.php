@@ -57,6 +57,7 @@
                     <div style="float:left"><a style="font-size: 16px" href="/vr/changepassword.php">Change Password</a></div>
                     <div style="float:right"><a style="font-size: 20px" href="/vr/logout.php">Logout</a></div>
                 </div>
+                <span><br></span>
 				<form class="login100-form validate-form" action="handler.php" method="post">
 					
 
@@ -76,10 +77,6 @@
                     </span>
                     ";
                     ?>
-
-                    <span class="login100-form-title p-b-34 p-t-27">
-						Welcome ". $firstName. " ". $lastName." 
-                    </span>
                     <div>
                         Please select something to do:
                         
