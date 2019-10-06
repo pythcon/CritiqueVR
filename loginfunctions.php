@@ -12,7 +12,7 @@
         $result = mysqli_real_escape_string ($db, $_POST[$name]);
     }
 //------------------------------------------------------------------//
-    function auth ($u, $p, &$t){
+    function auth ($u, $p, &$t, &$reset){
         global $db;
         
         $s = "SELECT * FROM accounts WHERE email = '$u'";
@@ -24,7 +24,7 @@
             $resetPassword     	= $r[ "resetPassword" ];
         }
         
-        if (reset){
+        if ($reset){
             $s = "SELECT * FROM accounts WHERE (email = '$u' AND resetPassword = '$p') OR (email = '$u' AND password = '$p')";
             $t = mysqli_query($db, $s) or die("Error Querying Database.");
         }else{
