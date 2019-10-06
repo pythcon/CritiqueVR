@@ -26,5 +26,5 @@
     if ($bad) exit("Bad Data");
 
 //call forgot password function
-forgotPasswordMailer($email, &$out);
+forgotPasswordMailer($email, $out);
 ?>
