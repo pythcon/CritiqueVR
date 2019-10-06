@@ -53,7 +53,7 @@
             echo"
             <script>
                 alert(\"Password Changed. Please log in. \");
-                window.location.replace(\"/vr/dashboard.php\");
+                window.location.replace(\"/vr/index.html\");
             </script>";
             $_SESSION['logged'] = false;
             session_destroy();
