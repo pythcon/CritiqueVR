@@ -4,16 +4,19 @@
     session_start();
     error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
     ini_set('display_errors' , 1);
+    include("loginfunctions.php");
+    include("account.php");
 
-    //check if authenticated
-    if (!$_SESSION['logged']){
-        echo"
-        <script>
-            alert(\"Not logged in...\");
-            window.location.replace(\"/vr/index.html\");
-        </script>";
-        exit();
-    }
+    //DB Connection
+    $db = mysqli_connect($hostname, $username, $password, $project);
+
+    if (mysqli_connect_errno())
+      {	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          exit();
+      }
+    
+    gatekeeper();
+        
 ?>
 <!------------------------------------------------------------------->
 <!Doctype HTML>

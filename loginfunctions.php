@@ -56,9 +56,14 @@
 //---------------------------------------------------------------------//
     function gatekeeper(){
         global $db;
-        $delay = 5;
-        if (!isset ($_SESSION["logged"])){
-            redirect ("<span style=\"color:red;\">Please Log In. Session was reset...</span>", "/vr/index.html", $delay);
+        //check if authenticated
+        if (!$_SESSION['logged']){
+            echo"
+            <script>
+                alert(\"Not logged in...\");
+                window.location.replace(\"/vr/index.html\");
+            </script>";
+            exit();
         }
     }
 
