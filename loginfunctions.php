@@ -114,7 +114,7 @@ function forgotPasswordMailer($email, &$out){
 
     echo"
     <script>
-        alert(\"Password reset email was sent. Please check your email.\");
+        alert(\"If you were registered in our system, a password reset email was sent. Please check your email.\");
         window.location.replace(\"/vr/index.html\");
     </script>";
 
