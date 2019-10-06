@@ -36,7 +36,7 @@
         
         if ($num_rows>0){
             //sets reset to false and deletes temp password
-            $s = "UPDATE accounts SET reset=NULL, resetPassword=NULL WHERE email='$email'";
+            $s = "UPDATE accounts SET reset=CAST(NULL As boolean), resetPassword=CAST(NULL As varchar(40)) WHERE email='$email'";
             $t = mysqli_query($db, $s) or die("Error Querying Database.");
             return true;
         }
