@@ -89,7 +89,6 @@
                     <div style="float:right"><a style="font-size: 20px" href="/vr/logout.php">Logout</a></div>
                 </div>
                 <span><br></span>
-				<form class="login100-form validate-form" action="handler.php" method="post">
 					
 
                     <?php 
@@ -165,7 +164,6 @@
                             echo "</table>";
                         ?>
                     </div>
-				</form>
 			</div>
 		</div>
 	</div>
