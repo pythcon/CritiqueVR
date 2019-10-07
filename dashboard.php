@@ -148,9 +148,10 @@
                     <!--LIST BRAINSTORMING SESSIONS-->
                     <div id = "listBrainstormingSessions">
                         <?php
-                            echo "<table border=2 cellpadding=10>";
                             $s = "SELECT * FROM sessions where email='$email'";
                             $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
+                            echo "Current Active Sessions: ".mysqli_num_rows($t);
+                            echo "<table border=2 cellpadding=10>";
                             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                 $name                   = $r[ "Name" ];
                                 $code				    = $r[ "code" ];
