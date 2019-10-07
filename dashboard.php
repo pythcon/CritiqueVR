@@ -108,7 +108,7 @@
                     </span>
                     ";
                     ?>
-                    <div>
+                    <div align="center">
                         Please select something to do:
                         <select name = "options" id = "options" onchange="appear()">
                             <option value = "0">(select a tool)</option>
@@ -147,11 +147,11 @@
 				        </form>
                     </div>
                     <!--LIST BRAINSTORMING SESSIONS-->
-                    <div id = "listBrainstormingSessions">
+                    <div id = "listBrainstormingSessions" align="center">
                         <?php
                             $s = "SELECT * FROM sessions where email='$email'";
                             $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
-                            echo "Current Active Sessions: ".mysqli_num_rows($t);
+                            echo "Current Active Sessions: <b>".mysqli_num_rows($t). "</b>";
                             echo "<table border=2 cellpadding=10>";
                             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                 $name                   = $r[ "name" ];
