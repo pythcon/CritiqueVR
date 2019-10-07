@@ -127,15 +127,15 @@
                                 <span class="focus-input100" data-placeholder="&#xf207;"></span>
                             </div>
 
-                            <div class="wrap-input100 validate-input" data-validate = "Enter name of the room">
-                                <input class="input100" type="text" name="name" placeholder="Project Name (ex. IT490 Demo)">
+                            <div class="wrap-input100 validate-input" data-validate = "Enter description of the room">
+                                <input class="input100" type="text" name="description" placeholder="Project Description">
                                 <span class="focus-input100" data-placeholder="&#xf207;"></span>
                             </div>
 
                             <div class="contact100-form-checkbox">
                                 <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                                 <label class="label-checkbox100" for="ckb1">
-                                    Remember me
+                                    Test Checkbox
                                 </label>
                             </div>
 
@@ -146,6 +146,7 @@
                             </div>
 				        </form>
                     </div>
+                    
                     <!--LIST BRAINSTORMING SESSIONS-->
                     <div id = "listBrainstormingSessions" align="center">
                         <?php
