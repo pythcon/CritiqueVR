@@ -16,6 +16,7 @@
       }
     
     gatekeeper();
+    $email = $_SESSION['email'];
         
 ?>
 <!------------------------------------------------------------------->
@@ -49,6 +50,36 @@
 <!--===============================================================================================-->
 </head>
 <body>
+    
+<!-------------------------------------------------------------------------------------------->
+<style>
+    #createBrainstormingSession {display: none;}
+    #listBrainstormingSessions {display: none;}
+    
+</style> 
+
+<script>
+    function appear(){
+        createBrainstormingSessionPointer = document.getElementById("createBrainstormingSession")
+        listBrainstormingSessionsPointer = document.getElementById("listBrainstormingSessions")
+        dropDownMenu = document.getElementById("options")
+        $toolChoice = dropDownMenu.value
+        switch($toolChoice){
+            case "1":
+                createBrainstormingSessionPointer.style.display = "block"
+                listBrainstormingSessions.style.display = "none"
+                break;
+            case "2":
+                createBrainstormingSessionPointer.style.display = "none"
+                listBrainstormingSessions.style.display = "block"
+                break;
+            default:
+                createBrainstormingSessionPointer.style.display = "none"
+                listBrainstormingSessions.style.display = "none"
+        }
+    }
+</script>
+<!-------------------------------------------------------------------------------------------->
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
@@ -79,9 +110,58 @@
                     ?>
                     <div>
                         Please select something to do:
-                        
+                        <select name = "options" id = "options" onchange="appear()">
+                            <option value = "0">(select a tool)</option>
+                            <option value = "1">Create New Brainstorming Session</option>
+                            <option value = "2">List Brainstorming Sessions</option>
+                        </select>
                     </div>
                     
+                    <!--CREATE BRAINSTORMING SESSION-->
+                    <div id = "createBrainstormingSession">
+                        <form class="login100-form validate-form" action="handler_createsession.php" method="post">
+                            
+                            <div class="wrap-input100 validate-input" data-validate = "Enter email address">
+                                <input class="input100" type="text" name="email" placeholder="Email">
+                                <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                            </div>
+
+                            <div class="wrap-input100 validate-input" data-validate="Enter password">
+                                <input class="input100" type="password" name="pass" placeholder="Password">
+                                <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                            </div>
+
+                            <div class="contact100-form-checkbox">
+                                <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                                <label class="label-checkbox100" for="ckb1">
+                                    Remember me
+                                </label>
+                            </div>
+
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn">
+                                    Create Session
+                                </button>
+                            </div>
+				        </form>
+                    </div>
+                    <!--LIST BRAINSTORMING SESSIONS-->
+                    <div id = "listBrainstormingSessions">
+                        <?php
+                            echo "<table border=2 cellpadding=10>";
+                            $s = "SELECT * FROM sessions where email='$email'";
+                            $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
+                            while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
+                                $name                   = $r[ "Name" ];
+                                $code				    = $r[ "code" ];
+                                echo "<tr>";
+                                echo "<td>". $name. "</td>";
+                                echo "<td>". $code. "</td>";
+                                echo "</tr>";
+                            }
+                            echo "</table>";
+                        ?>
+                    </div>
 				</form>
 			</div>
 		</div>
