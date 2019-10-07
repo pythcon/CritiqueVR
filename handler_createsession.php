@@ -25,10 +25,8 @@
             
             echo"
             <script>
-                alert(\"Brainstorming session was created. Please log in with code: \");
+                alert(\"Brainstorming session was created. Please log in with code: ".$code."\");
                 window.location.replace(\"/vr/dashboard.php\");
             </script>";
-            $_SESSION['logged'] = false;
-            session_destroy();
         ?>
 <!------------------------------------------------------------------->
