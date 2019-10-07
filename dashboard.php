@@ -121,14 +121,14 @@
                     <div id = "createBrainstormingSession">
                         <form class="login100-form validate-form" action="handler_createsession.php" method="post">
                             
-                            <div class="wrap-input100 validate-input" data-validate = "Enter email address">
-                                <input class="input100" type="text" name="email" placeholder="Email">
+                            <div class="wrap-input100 validate-input" data-validate = "Enter name of the room">
+                                <input class="input100" type="text" name="name" placeholder="Project Name (ex. IT490 Demo)">
                                 <span class="focus-input100" data-placeholder="&#xf207;"></span>
                             </div>
 
-                            <div class="wrap-input100 validate-input" data-validate="Enter password">
-                                <input class="input100" type="password" name="pass" placeholder="Password">
-                                <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                            <div class="wrap-input100 validate-input" data-validate = "Enter name of the room">
+                                <input class="input100" type="text" name="name" placeholder="Project Name (ex. IT490 Demo)">
+                                <span class="focus-input100" data-placeholder="&#xf207;"></span>
                             </div>
 
                             <div class="contact100-form-checkbox">
@@ -153,7 +153,7 @@
                             echo "Current Active Sessions: ".mysqli_num_rows($t);
                             echo "<table border=2 cellpadding=10>";
                             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
-                                $name                   = $r[ "Name" ];
+                                $name                   = $r[ "name" ];
                                 $code				    = $r[ "code" ];
                                 echo "<tr>";
                                 echo "<td>". $name. "</td>";
