@@ -17,7 +17,7 @@
     
     gatekeeper();
     $email = $_SESSION['email'];
-        
+
 ?>
 <!------------------------------------------------------------------->
 <!Doctype HTML>
@@ -116,6 +116,7 @@
                             <option value = "2">List Brainstorming Sessions</option>
                         </select>
                     </div>
+                    <hr>
                     
                     <!--CREATE BRAINSTORMING SESSION-->
                     <div id = "createBrainstormingSession">
