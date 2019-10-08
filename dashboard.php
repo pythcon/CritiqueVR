@@ -138,16 +138,16 @@
                                 </label>
                             </div>
                             <div>
-                                <input type="radio" name="onePiece" value="onePiece">
+                                <input type="radio" name="piece" value="onePiece">
                                     One Piece
                                 <br>
-                                <input type="radio" name="twoPieces" value="twoPieces">
+                                <input type="radio" name="piece" value="twoPieces">
                                     Two Pieces
                                 <br>
-                                <input type="radio" name="threePieces" value="threePieces">
+                                <input type="radio" name="piece" value="threePieces">
                                     Three Pieces
                                 <br>
-                                <input type="radio" name="fourPieces" value="fourPieces">
+                                <input type="radio" name="piece" value="fourPieces">
                                     Four Pieces
                                 <br>
                             </div>
