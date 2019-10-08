@@ -20,7 +20,7 @@
             $code = createRoomCode();
             
             //Successfully passed all tests:
-            $s = "INSERT INTO sessions VALUES('$email', '$projectName', '$code')"; 
+            $s = "INSERT INTO sessions VALUES('$email', '$projectName', '$projectDescription', '$code')"; 
             $t = mysqli_query($db,$s); 
             
             echo"
