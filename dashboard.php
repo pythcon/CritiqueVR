@@ -140,11 +140,11 @@
                             <div>
                                 <span>How many pieces will you be uploading?</span>
                                 <br>
-                                <input type="radio" name="piece" value="onePiece">&nbsp;
+                                <input type="radio" name="piece" value="onePiece">&nbsp;&nbsp;&nbsp;&nbsp;
                                     1
-                                <input type="radio" name="piece" value="twoPieces">&nbsp;
+                                <input type="radio" name="piece" value="twoPieces">&nbsp;&nbsp;&nbsp;&nbsp;
                                     2
-                                <input type="radio" name="piece" value="threePieces">&nbsp;
+                                <input type="radio" name="piece" value="threePieces">&nbsp;&nbsp;&nbsp;&nbsp;
                                     3
                                 <input type="radio" name="piece" value="fourPieces">
                                     4
