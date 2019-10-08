@@ -136,6 +136,8 @@
                                 <label class="label-checkbox100" for="ckb1">
                                     Test Checkbox
                                 </label>
+                            </div>
+                            <div>
                                 <input type="radio" name="onePiece" value="onePiece">
                                     One Piece
                                 <br>
