@@ -137,6 +137,11 @@
                                     Test Checkbox
                                 </label>
                             </div>
+                            
+                            <div class="container-login100-form-btn">
+                                <input type="radio" name="onePiece" value="onePiece">
+                                <input type="radio" name="multiplePieces" value="multiplePieces">
+                            </div> 
 
                             <div class="container-login100-form-btn">
                                 <button class="login100-form-btn">
