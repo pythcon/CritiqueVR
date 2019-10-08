@@ -139,6 +139,7 @@
                             </div>
                             <div>
                                 <span>How many pieces will you be uploading?</span>
+                                <br>
                                 <input type="radio" name="piece" value="onePiece">
                                     One Piece
                                 <br>
