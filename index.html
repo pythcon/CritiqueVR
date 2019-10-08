@@ -4,9 +4,9 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 
-<body style="background-scroll='img/conferenceroom.jpg';">
+<body>
 
-<form id="regForm" action="/action_page.php">
+<form id="getStartedForm" action="/handler_registration.php">
   <h1>Register:</h1>
   <!-- One "tab" for each step in the form: -->
   <div class="tab">Name:
@@ -14,7 +14,7 @@
     <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
   </div>
   <div class="tab">Contact Info:
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required></p>
     <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
   </div>
   <div class="tab">Birthday:
