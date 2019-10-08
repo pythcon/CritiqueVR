@@ -136,13 +136,13 @@
                                 <label class="label-checkbox100" for="ckb1">
                                     Test Checkbox
                                 </label>
-                                <input type="radio" name="onePiece" value="onePiece">
+                                <input type="radio" name="onePiece" value="onePiece"><br>
                                     One Piece
-                                <input type="radio" name="twoPieces" value="twoPieces">
+                                <input type="radio" name="twoPieces" value="twoPieces"><br>
                                     Two Pieces
-                                <input type="radio" name="threePieces" value="threePieces">
+                                <input type="radio" name="threePieces" value="threePieces"><br>
                                     Three Pieces
-                                <input type="radio" name="fourPieces" value="fourPieces">
+                                <input type="radio" name="fourPieces" value="fourPieces"><br>
                                     Four Pieces
                             </div>
 
