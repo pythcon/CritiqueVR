@@ -100,7 +100,7 @@ body {
         background: #77815c;
         transition: all 0.5s ease; }
     .steps ul:before {
-      content: "Welcome to CritiqueVR";
+      content: "Registration Portal";
       font-size: 22px;
       font-family: "Poppins-SemiBold";
       color: #333;
