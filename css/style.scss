@@ -107,7 +107,7 @@ body {
 			}
 			&.first, &.checked {
 				a {
-					background: #f3d4b7;
+					background: #77815c;
 					transition: all 0.5s ease;
 				}
 			}
@@ -174,7 +174,7 @@ h3 {
 	width: 100%;
 	padding: 0 18px;
 	&:focus {
-		border-color: #f3d4b7;
+		border-color: #77815c;
 	}
 	&::-webkit-input-placeholder { 
 		color: #999;
@@ -220,7 +220,7 @@ textarea.form-control {
 			height: 51px;
 			width: 135px;
 			align-items: center;
-			background: #f3d4b7;
+			background: #77815c;
 			cursor: pointer;
 			position: relative;
 			padding-left: 41px;
@@ -240,7 +240,7 @@ textarea.form-control {
   				transform: translateZ(0);
 			}
 			&:hover {
-				background: #d9bda3;
+				background: #77815c;
 				&:before {
 					-webkit-animation-name: hvr-icon-wobble-horizontal;
 					animation-name: hvr-icon-wobble-horizontal;
