@@ -124,7 +124,7 @@
                     
                     <!--CREATE BRAINSTORMING SESSION-->
                     <div id = "createBrainstormingSession">
-                        <form class="login100-form validate-form" action="handler_createsession.php" method="post">
+                        <form class="login100-form validate-form" action="handler_createsession.php" method="post" enctype="multipart/form-data">
                             
                             <!--Room Name-->
                             <div class="wrap-input100 validate-input" data-validate = "Enter name of the room">
