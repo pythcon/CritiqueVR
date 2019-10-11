@@ -195,7 +195,7 @@
                             <div>
                                 <span>How many pieces will you be uploading?</span>
                                 <br>
-                                <input type="radio" name="piece" id="piece" value="1" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="1" checked="checked" onclick="fileUploadAppear(this);">
                                     1&nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="radio" name="piece" id="piece" value="2" onclick="fileUploadAppear(this);">
                                     2&nbsp;&nbsp;&nbsp;&nbsp;

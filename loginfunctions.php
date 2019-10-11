@@ -173,11 +173,11 @@ function uploadFiles($num, $code, &$filesArray){
     }
     
     if ($num > 1){
-        $target_file = $target_dir . basename($_FILES["twoFile"]["name"]);
+        $target_file2 = $target_dir . basename($_FILES["twoFile"]["name"]);
         $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $imageFileType = strtolower(pathinfo($target_file2,PATHINFO_EXTENSION));
         // Check if file already exists
-        if (file_exists($target_file)) {
+        if (file_exists($target_file2)) {
             die("Sorry, file already exists.");
             $uploadOk = 0;
         }
@@ -197,7 +197,7 @@ function uploadFiles($num, $code, &$filesArray){
             die("File(s) could not be uploaded.");
         // if everything is ok, try to upload file
         } else {
-            if (move_uploaded_file($_FILES["twoFile"]["tmp_name"], $target_file)) {
+            if (move_uploaded_file($_FILES["twoFile"]["tmp_name"], $target_file2)) {
                 echo "The file ". basename( $_FILES["twoFile"]["name"]). " has been uploaded.";
             } else {
                 die("Sorry, there was an error uploading your file.");
@@ -205,11 +205,11 @@ function uploadFiles($num, $code, &$filesArray){
         }
     }
     if ($num > 2){
-        $target_file = $target_dir . basename($_FILES["threeFile"]["name"]);
+        $target_file3 = $target_dir . basename($_FILES["threeFile"]["name"]);
         $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $imageFileType = strtolower(pathinfo($target_file3,PATHINFO_EXTENSION));
         // Check if file already exists
-        if (file_exists($target_file)) {
+        if (file_exists($target_file3)) {
             die("Sorry, file already exists.");
             $uploadOk = 0;
         }
@@ -229,7 +229,7 @@ function uploadFiles($num, $code, &$filesArray){
             die("File(s) could not be uploaded.");
         // if everything is ok, try to upload file
         } else {
-            if (move_uploaded_file($_FILES["threeFile"]["tmp_name"], $target_file)) {
+            if (move_uploaded_file($_FILES["threeFile"]["tmp_name"], $target_file3)) {
                 echo "The file ". basename( $_FILES["threeFile"]["name"]). " has been uploaded.";
             } else {
                 die("Sorry, there was an error uploading your file.");
@@ -237,11 +237,11 @@ function uploadFiles($num, $code, &$filesArray){
         }
     }
     if ($num > 3){
-        $target_file = $target_dir . basename($_FILES["fourFile"]["name"]);
+        $target_file4 = $target_dir . basename($_FILES["fourFile"]["name"]);
         $uploadOk = 1;
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $imageFileType = strtolower(pathinfo($target_file4,PATHINFO_EXTENSION));
         // Check if file already exists
-        if (file_exists($target_file)) {
+        if (file_exists($target_file4)) {
             die("Sorry, file already exists.");
             $uploadOk = 0;
         }
@@ -261,13 +261,17 @@ function uploadFiles($num, $code, &$filesArray){
             die("File(s) could not be uploaded.");
         // if everything is ok, try to upload file
         } else {
-            if (move_uploaded_file($_FILES["fourFile"]["tmp_name"], $target_file)) {
+            if (move_uploaded_file($_FILES["fourFile"]["tmp_name"], $target_file4)) {
                 echo "The file ". basename( $_FILES["fourFile"]["name"]). " has been uploaded.";
             } else {
                 die("Sorry, there was an error uploading your file.");
             }
         }
     }
+    
+    //throw filepaths in array
+    $filesArray = array($target_dir.$target_file,$target_dir.$target_file2,$target_dir.$target_file3,$target_dir.$target_file4);
+    
 }
 ?>
 
