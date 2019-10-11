@@ -55,10 +55,10 @@
 <style>
     #createBrainstormingSession {display: none;}
     #listBrainstormingSessions {display: none;}
-    #oneUpload {display:block;}
-    #twoUpload {display:none;}
-    #threeUpload {display:none;}
-    #fourUpload {display:none;}
+    #upload1 {display:block;}
+    #upload2 {display:none;}
+    #upload3 {display:none;}
+    #upload4 {display:none;}
     
 </style> 
 
