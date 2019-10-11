@@ -1,53 +1,87 @@
-$(function(){
-	$("#wizard").steps({
-        headerTag: "h4",
-        bodyTag: "section",
-        transitionEffect: "fade",
-        enableAllSteps: true,
-        transitionEffectSpeed: 500,
-        onStepChanging: function (event, currentIndex, newIndex) { 
-            if ( newIndex === 1 ) {
-                $('.steps ul').addClass('step-2');
-            } else {
-                $('.steps ul').removeClass('step-2');
-            }
-            if ( newIndex === 2 ) {
-                $('.steps ul').addClass('step-3');
-            } else {
-                $('.steps ul').removeClass('step-3');
-            }
 
-            if ( newIndex === 3 ) {
-                $('.steps ul').addClass('step-4');
-                $('.actions ul').addClass('step-last');
-            } else {
-                $('.steps ul').removeClass('step-4');
-                $('.actions ul').removeClass('step-last');
+(function ($) {
+    "use strict";
+
+
+    /*==================================================================
+    [ Focus input ]*/
+    $('.input100').each(function(){
+        $(this).on('blur', function(){
+            if($(this).val().trim() != "") {
+                $(this).addClass('has-val');
             }
-            return true; 
-        },
-        labels: {
-            finish: "Place Holder",
-            next: "Next",
-            previous: "Previous"
+            else {
+                $(this).removeClass('has-val');
+            }
+        })    
+    })
+  
+  
+    /*==================================================================
+    [ Validate ]*/
+    var input = $('.validate-input .input100');
+
+    $('.validate-form').on('submit',function(){
+        var check = true;
+
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
+            }
         }
+
+        return check;
     });
-    // Custom Steps Jquery Steps
-    $('.wizard > .steps li a').click(function(){
-    	$(this).parent().addClass('checked');
-		$(this).parent().prevAll().addClass('checked');
-		$(this).parent().nextAll().removeClass('checked');
+
+
+    $('.validate-form .input100').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+        });
     });
-    // Custom Button Jquery Steps
-    $('.forward').click(function(){
-    	$("#wizard").steps('next');
-    })
-    $('.backward').click(function(){
-        $("#wizard").steps('previous');
-    })
-    // Checkbox
-    $('.checkbox-circle label').click(function(){
-        $('.checkbox-circle label').removeClass('active');
-        $(this).addClass('active');
-    })
-})
+
+    function validate (input) {
+        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
+    }
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).removeClass('alert-validate');
+    }
+    
+    /*==================================================================
+    [ Show pass ]*/
+    var showPass = 0;
+    $('.btn-show-pass').on('click', function(){
+        if(showPass == 0) {
+            $(this).next('input').attr('type','text');
+            $(this).addClass('active');
+            showPass = 1;
+        }
+        else {
+            $(this).next('input').attr('type','password');
+            $(this).removeClass('active');
+            showPass = 0;
+        }
+        
+    });
+
+
+})(jQuery);
