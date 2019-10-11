@@ -115,7 +115,7 @@
                 fourUploadPointer.style.display = "block"
                 break;
             default:
-                oneUploadPointer.style.display = "none"
+                oneUploadPointer.style.display = "block"
                 twoUploadPointer.style.display = "none"
                 threeUploadPointer.style.display = "none"
                 fourUploadPointer.style.display = "none"
