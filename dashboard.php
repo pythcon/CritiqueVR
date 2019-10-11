@@ -55,6 +55,10 @@
 <style>
     #createBrainstormingSession {display: none;}
     #listBrainstormingSessions {display: none;}
+    #oneUpload {display:none;}
+    #twoUpload {display:none;}
+    #threeUpload {display:none;}
+    #fourUpload {display:none;}
     
 </style> 
 
@@ -79,9 +83,43 @@
         }
     }
     function fileUploadAppear(){
-        
+        oneUploadPointer = document.getElementById("oneUpload")
+        twoUploadPointer = document.getElementById("twoUpload")
+        threeUploadPointer = document.getElementById("threeUpload")
+        fourUploadPointer = document.getElementById("fourUpload")
         dropDownMenu = document.getElementsByName("piece")
-        $toolChoice = dropDownMenu.value
+        $toolChoice2 = dropDownMenu.value
+        switch($toolChoice2){
+            case 1:
+                oneUploadPointer.style.display = "block"
+                twoUploadPointer.style.display = "none"
+                threeUploadPointer.style.display = "none"
+                fourUploadPointer.style.display = "none"
+                break;
+            case 2:
+                oneUploadPointer.style.display = "none"
+                twoUploadPointer.style.display = "block"
+                threeUploadPointer.style.display = "none"
+                fourUploadPointer.style.display = "none"
+                break;
+            case 3:
+                oneUploadPointer.style.display = "none"
+                twoUploadPointer.style.display = "none"
+                threeUploadPointer.style.display = "block"
+                fourUploadPointer.style.display = "none"
+                break;
+            case 4:
+                oneUploadPointer.style.display = "none"
+                twoUploadPointer.style.display = "none"
+                threeUploadPointer.style.display = "none"
+                fourUploadPointer.style.display = "block"
+                break;
+            default:
+                oneUploadPointer.style.display = "none"
+                twoUploadPointer.style.display = "none"
+                threeUploadPointer.style.display = "none"
+                fourUploadPointer.style.display = "none"
+        }
     }
 </script>
 <!-------------------------------------------------------------------------------------------->
