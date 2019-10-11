@@ -87,7 +87,7 @@
         twoUploadPointer = document.getElementById("twoUpload")
         threeUploadPointer = document.getElementById("threeUpload")
         fourUploadPointer = document.getElementById("fourUpload")
-        var toolChoice2 = $("input:radio[name=piece]:checked").val()
+        $toolChoice2 = piece.value;
         switch($toolChoice2){
             case "1":
                 oneUploadPointer.style.display = "block"
