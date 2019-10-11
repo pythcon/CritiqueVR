@@ -55,7 +55,7 @@
 <style>
     #createBrainstormingSession {display: none;}
     #listBrainstormingSessions {display: none;}
-    #oneUpload {display:none;}
+    #oneUpload {display:block;}
     #twoUpload {display:none;}
     #threeUpload {display:none;}
     #fourUpload {display:none;}
