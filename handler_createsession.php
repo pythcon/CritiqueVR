@@ -24,6 +24,7 @@
             //file upload
             $target_dir = "sessions/".$code;
             $numOfFiles = $_POST["piece"];
+            $numOfFiles = (int)$numOfFiles;
             
             //initialize $filesArray
             uploadFiles($numOfFiles, $code, $filesArray);

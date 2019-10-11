@@ -87,28 +87,28 @@
         twoUploadPointer = document.getElementById("twoUpload")
         threeUploadPointer = document.getElementById("threeUpload")
         fourUploadPointer = document.getElementById("fourUpload")
-        dropDownMenu = document.getElementsByName("piece")
+        dropDownMenu = document.getElementById("piece")
         $toolChoice2 = dropDownMenu.value
         switch($toolChoice2){
-            case 1:
+            case "1":
                 oneUploadPointer.style.display = "block"
                 twoUploadPointer.style.display = "none"
                 threeUploadPointer.style.display = "none"
                 fourUploadPointer.style.display = "none"
                 break;
-            case 2:
+            case "2":
                 oneUploadPointer.style.display = "none"
                 twoUploadPointer.style.display = "block"
                 threeUploadPointer.style.display = "none"
                 fourUploadPointer.style.display = "none"
                 break;
-            case 3:
+            case "3":
                 oneUploadPointer.style.display = "none"
                 twoUploadPointer.style.display = "none"
                 threeUploadPointer.style.display = "block"
                 fourUploadPointer.style.display = "none"
                 break;
-            case 4:
+            case "4":
                 oneUploadPointer.style.display = "none"
                 twoUploadPointer.style.display = "none"
                 threeUploadPointer.style.display = "none"
@@ -195,13 +195,13 @@
                             <div>
                                 <span>How many pieces will you be uploading?</span>
                                 <br>
-                                <input type="radio" name="piece" value="onePiece" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="1" onclick="fileUploadAppear(this);">
                                     1&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" value="twoPieces" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="2" onclick="fileUploadAppear(this);">
                                     2&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" value="threePieces" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="3" onclick="fileUploadAppear(this);">
                                     3&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" value="fourPieces" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="4" onclick="fileUploadAppear(this);">
                                     4
                             </div>
                             
