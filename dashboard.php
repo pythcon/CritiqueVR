@@ -157,13 +157,13 @@
                             <div id="radioUpload">
                                 <span>How many pieces will you be uploading?</span>
                                 <br>
-                                <input type="radio" name="piece" id="piece" value="1" checked="checked">
+                                <input type="radio" name="piece" id="piece" value="1" class="desc" checked="checked">
                                     1&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="2">
+                                <input type="radio" name="piece" id="piece" class="desc" value="2">
                                     2&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="3">
+                                <input type="radio" name="piece" id="piece" class="desc" value="3">
                                     3&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="4">
+                                <input type="radio" name="piece" id="piece" class="desc" value="4">
                                     4
                             </div>
                             
