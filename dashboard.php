@@ -87,8 +87,7 @@
         twoUploadPointer = document.getElementById("twoUpload")
         threeUploadPointer = document.getElementById("threeUpload")
         fourUploadPointer = document.getElementById("fourUpload")
-        dropDownMenu = document.getElementById("piece")
-        $toolChoice2 = dropDownMenu.value
+        var toolChoice2 = $("input:radio[name=piece]:checked").val()
         switch($toolChoice2){
             case "1":
                 oneUploadPointer.style.display = "block"
