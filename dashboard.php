@@ -143,7 +143,7 @@
                             </div>
                             <!--Presentation Reason-->
                             <div class="wrap-input100 validate-input" data-validate = "Enter reason for presenting this">
-                                <input class="input100" type="text" name="creationReason" placeholder="I am presenting this because...">
+                                <input class="input100" type="text" name="presentationReason" placeholder="I am presenting this because...">
                                 <span class="focus-input100" data-placeholder="&#xf207;"></span>
                             </div>
 
