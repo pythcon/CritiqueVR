@@ -29,7 +29,7 @@
             uploadFiles($numOfFiles, $code, $filesArray);
             
             //Successfully passed all tests:
-            $s = "INSERT INTO sessions VALUES('$email', '$roomName', '$contentDescription', '$creationReason', '$presentationReason', '$filesArray', '$code')"; 
+            $s = "INSERT INTO sessions VALUES('$email', '$roomName', '$contentDescription', '$creationReason', '$presentationReason', '$filesArray', '$code', '$numOfFiles')"; 
             $t = mysqli_query($db,$s); 
             
             echo"
