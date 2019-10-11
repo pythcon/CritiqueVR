@@ -97,21 +97,21 @@
                 fourUploadPointer.style.display = "none"
                 break;
             case "2":
-                oneUploadPointer.style.display = "none"
+                oneUploadPointer.style.display = "block"
                 twoUploadPointer.style.display = "block"
                 threeUploadPointer.style.display = "none"
                 fourUploadPointer.style.display = "none"
                 break;
             case "3":
-                oneUploadPointer.style.display = "none"
-                twoUploadPointer.style.display = "none"
+                oneUploadPointer.style.display = "block"
+                twoUploadPointer.style.display = "block"
                 threeUploadPointer.style.display = "block"
                 fourUploadPointer.style.display = "none"
                 break;
             case "4":
-                oneUploadPointer.style.display = "none"
-                twoUploadPointer.style.display = "none"
-                threeUploadPointer.style.display = "none"
+                oneUploadPointer.style.display = "block"
+                twoUploadPointer.style.display = "block"
+                threeUploadPointer.style.display = "block"
                 fourUploadPointer.style.display = "block"
                 break;
             default:

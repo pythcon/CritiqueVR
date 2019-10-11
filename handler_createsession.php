@@ -22,7 +22,6 @@
             $code = createRoomCode();
             
             //file upload
-            $target_dir = "sessions/".$code;
             $numOfFiles = $_POST["piece"];
             $numOfFiles = (int)$numOfFiles;
             
