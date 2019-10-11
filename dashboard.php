@@ -82,44 +82,7 @@
                 listBrainstormingSessions.style.display = "none"
         }
     }
-    function fileUploadAppear(){
-        oneUploadPointer = document.getElementById("oneUpload")
-        twoUploadPointer = document.getElementById("twoUpload")
-        threeUploadPointer = document.getElementById("threeUpload")
-        fourUploadPointer = document.getElementById("fourUpload")
-        $toolChoice2 = piece.value;
-        switch($toolChoice2){
-            case "1":
-                oneUploadPointer.style.display = "block"
-                twoUploadPointer.style.display = "none"
-                threeUploadPointer.style.display = "none"
-                fourUploadPointer.style.display = "none"
-                break;
-            case "2":
-                oneUploadPointer.style.display = "block"
-                twoUploadPointer.style.display = "block"
-                threeUploadPointer.style.display = "none"
-                fourUploadPointer.style.display = "none"
-                break;
-            case "3":
-                oneUploadPointer.style.display = "block"
-                twoUploadPointer.style.display = "block"
-                threeUploadPointer.style.display = "block"
-                fourUploadPointer.style.display = "none"
-                break;
-            case "4":
-                oneUploadPointer.style.display = "block"
-                twoUploadPointer.style.display = "block"
-                threeUploadPointer.style.display = "block"
-                fourUploadPointer.style.display = "block"
-                break;
-            default:
-                oneUploadPointer.style.display = "block"
-                twoUploadPointer.style.display = "none"
-                threeUploadPointer.style.display = "none"
-                fourUploadPointer.style.display = "none"
-        }
-    }
+    
 </script>
 <!-------------------------------------------------------------------------------------------->
 	
@@ -191,40 +154,50 @@
                                 </label>
                             </div>-->
                             <!--File Upload-->
-                            <div>
+                            <div id="radioUpload">
                                 <span>How many pieces will you be uploading?</span>
                                 <br>
-                                <input type="radio" name="piece" id="piece" value="1" checked="checked" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="1" checked="checked">
                                     1&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="2" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="2">
                                     2&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="3" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="3">
                                     3&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="4" onclick="fileUploadAppear(this);">
+                                <input type="radio" name="piece" id="piece" value="4">
                                     4
                             </div>
                             
                             <!--Contains all file uploads-->
                             <div>
-                                <div id="oneUpload">
+                                <div id="upload1">
                                     <input type="file" name="oneFile" id="oneFile">
                                 </div>
-                                <div id="twoUpload">
+                                <div id="upload2">
                                     <input type="file" name="oneFile" id="oneFile">
                                     <input type="file" name="twoFile" id="twoFile">
                                 </div>
-                                <div id="threeUpload">
+                                <div id="upload3">
                                     <input type="file" name="oneFile" id="oneFile">
                                     <input type="file" name="twoFile" id="twoFile">
                                     <input type="file" name="threeFile" id="threeFile">
                                 </div>
-                                <div id="fourUpload">
+                                <div id="upload4">
                                     <input type="file" name="oneFile" id="oneFile">
                                     <input type="file" name="twoFile" id="twoFile">
                                     <input type="file" name="threeFile" id="threeFile">
                                     <input type="file" name="fourFile" id="fourFile">
                                 </div>
                             </div>
+                            
+                            <script>
+                                $(document).ready(function() {
+                                    $("input[name$='piece']").click(function() {
+                                        var test = $(this).val();
+                                        $("div.desc").hide();
+                                        $("#upload" + test).show();
+                                    });
+                                });
+                            </script>
                             <!--End file uploads-->
                             
                             <br>
