@@ -138,5 +138,136 @@ function random_pass($length){
 function createRoomCode(){
     return random_pass(6);
 }
+
+function uploadFiles($num, $code, &$filesArray){
+    $target_dir = "uploads/".$code;
+    $target_file = $target_dir . basename($_FILES["oneFile"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    // Check if file already exists
+    if (file_exists($target_file)) {
+        die("Sorry, file already exists.");
+        $uploadOk = 0;
+    }
+    // Check file size
+    if ($_FILES["oneFile"]["size"] > 500000) {
+        die("Sorry, your file is too large.");
+        $uploadOk = 0;
+    }
+    // Allow certain file formats
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" ) {
+        die("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
+        $uploadOk = 0;
+    }
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        die("File(s) could not be uploaded.");
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["oneFile"]["tmp_name"], $target_file)) {
+            echo "The file ". basename( $_FILES["oneFile"]["name"]). " has been uploaded.";
+        } else {
+            die("Sorry, there was an error uploading your file.");
+        }
+    }
+    
+    if ($num > 1){
+        $target_file = $target_dir . basename($_FILES["twoFile"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            die("Sorry, file already exists.");
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["twoFile"]["size"] > 500000) {
+            die("Sorry, your file is too large.");
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" ) {
+            die("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            die("File(s) could not be uploaded.");
+        // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["twoFile"]["tmp_name"], $target_file)) {
+                echo "The file ". basename( $_FILES["twoFile"]["name"]). " has been uploaded.";
+            } else {
+                die("Sorry, there was an error uploading your file.");
+            }
+        }
+    }
+    if ($num > 2){
+        $target_file = $target_dir . basename($_FILES["threeFile"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            die("Sorry, file already exists.");
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["threeFile"]["size"] > 500000) {
+            die("Sorry, your file is too large.");
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" ) {
+            die("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            die("File(s) could not be uploaded.");
+        // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["threeFile"]["tmp_name"], $target_file)) {
+                echo "The file ". basename( $_FILES["threeFile"]["name"]). " has been uploaded.";
+            } else {
+                die("Sorry, there was an error uploading your file.");
+            }
+        }
+    }
+    if ($num > 3){
+        $target_file = $target_dir . basename($_FILES["fourFile"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            die("Sorry, file already exists.");
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["fourFile"]["size"] > 500000) {
+            die("Sorry, your file is too large.");
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" ) {
+            die("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            die("File(s) could not be uploaded.");
+        // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fourFile"]["tmp_name"], $target_file)) {
+                echo "The file ". basename( $_FILES["fourFile"]["name"]). " has been uploaded.";
+            } else {
+                die("Sorry, there was an error uploading your file.");
+            }
+        }
+    }
+}
 ?>
 

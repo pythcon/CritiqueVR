@@ -78,6 +78,11 @@
                 listBrainstormingSessions.style.display = "none"
         }
     }
+    function fileUploadAppear(){
+        
+        dropDownMenu = document.getElementsByName("piece")
+        $toolChoice = dropDownMenu.value
+    }
 </script>
 <!-------------------------------------------------------------------------------------------->
 	
@@ -121,34 +126,70 @@
                     <div id = "createBrainstormingSession">
                         <form class="login100-form validate-form" action="handler_createsession.php" method="post">
                             
+                            <!--Room Name-->
                             <div class="wrap-input100 validate-input" data-validate = "Enter name of the room">
                                 <input class="input100" type="text" name="name" placeholder="Project Name (ex. IT490 Demo)">
                                 <span class="focus-input100" data-placeholder="&#xf207;"></span>
                             </div>
-
+                            <!--Room Description-->
                             <div class="wrap-input100 validate-input" data-validate = "Enter description of the room">
-                                <input class="input100" type="text" name="description" placeholder="Project Description">
+                                <input class="input100" type="text" name="description" placeholder="This is a project about...">
+                                <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                            </div>
+                            <!--Creation Reason-->
+                            <div class="wrap-input100 validate-input" data-validate = "Enter reason for creating the room">
+                                <input class="input100" type="text" name="creationReason" placeholder="I created this room because...">
+                                <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                            </div>
+                            <!--Presentation Reason-->
+                            <div class="wrap-input100 validate-input" data-validate = "Enter reason for presenting this">
+                                <input class="input100" type="text" name="creationReason" placeholder="I am presenting this because...">
                                 <span class="focus-input100" data-placeholder="&#xf207;"></span>
                             </div>
 
-                            <div class="contact100-form-checkbox">
+                            <!--<div class="contact100-form-checkbox">
                                 <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
                                 <label class="label-checkbox100" for="ckb1">
                                     Test Checkbox
                                 </label>
-                            </div>
+                            </div>-->
+                            <!--File Upload-->
                             <div>
                                 <span>How many pieces will you be uploading?</span>
                                 <br>
-                                <input type="radio" name="piece" value="onePiece">
+                                <input type="radio" name="piece" value="onePiece" onclick="fileUploadAppear(this);">
                                     1&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" value="twoPieces">
+                                <input type="radio" name="piece" value="twoPieces" onclick="fileUploadAppear(this);">
                                     2&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" value="threePieces">
+                                <input type="radio" name="piece" value="threePieces" onclick="fileUploadAppear(this);">
                                     3&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" value="fourPieces">
+                                <input type="radio" name="piece" value="fourPieces" onclick="fileUploadAppear(this);">
                                     4
                             </div>
+                            
+                            <!--Contains all file uploads-->
+                            <div>
+                                <div id="oneUpload">
+                                    <input type="file" name="oneFile" id="oneFile">
+                                </div>
+                                <div id="twoUpload">
+                                    <input type="file" name="oneFile" id="oneFile">
+                                    <input type="file" name="twoFile" id="twoFile">
+                                </div>
+                                <div id="threeUpload">
+                                    <input type="file" name="oneFile" id="oneFile">
+                                    <input type="file" name="twoFile" id="twoFile">
+                                    <input type="file" name="threeFile" id="threeFile">
+                                </div>
+                                <div id="fourUpload">
+                                    <input type="file" name="oneFile" id="oneFile">
+                                    <input type="file" name="twoFile" id="twoFile">
+                                    <input type="file" name="threeFile" id="threeFile">
+                                    <input type="file" name="fourFile" id="fourFile">
+                                </div>
+                            </div>
+                            <!--End file uploads-->
+                            
                             <br>
 
                             <div class="container-login100-form-btn">

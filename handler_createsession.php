@@ -13,14 +13,23 @@
 
             //GET ALL INFO FROM PREVIOUS FORM
             $email              = $_SESSION['email'];
-            $projectName        = $_POST["name"];
-            $projectDescription = $_POST["description"];
-            
+            $roomName           = $_POST["name"];
+            $contentDescription = $_POST["description"];
+            $creationReason     = $_POST["creationReason"];
+            $presentationReason = $_POST["presentationReason"];
+
             //Generate room code
             $code = createRoomCode();
             
+            //file upload
+            $target_dir = "sessions/".$code;
+            $numOfFiles = $_POST["piece"];
+            
+            //initialize $filesArray
+            uploadFiles($numOfFiles, $code, $filesArray);
+            
             //Successfully passed all tests:
-            $s = "INSERT INTO sessions VALUES('$email', '$projectName', '$projectDescription', '$code')"; 
+            $s = "INSERT INTO sessions VALUES('$email', '$roomName', '$contentDescription', '$creationReason', '$presentationReason', '$filesArray', '$code')"; 
             $t = mysqli_query($db,$s); 
             
             echo"
