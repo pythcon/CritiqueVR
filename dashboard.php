@@ -90,21 +90,21 @@
         document.getElementById("upload4").style.display = 'none'
     }
     function show2Upload(){
-        document.getElementById("upload1").style.display = 'none'
+        document.getElementById("upload1").style.display = 'block'
         document.getElementById("upload2").style.display = 'block'
         document.getElementById("upload3").style.display = 'none'
         document.getElementById("upload4").style.display = 'none'
     }
     function show3Upload(){
-        document.getElementById("upload1").style.display = 'none'
-        document.getElementById("upload2").style.display = 'none'
+        document.getElementById("upload1").style.display = 'block'
+        document.getElementById("upload2").style.display = 'block'
         document.getElementById("upload3").style.display = 'block'
         document.getElementById("upload4").style.display = 'none'
     }
     function show4Upload(){
-        document.getElementById("upload1").style.display = 'none'
-        document.getElementById("upload2").style.display = 'none'
-        document.getElementById("upload3").style.display = 'none'
+        document.getElementById("upload1").style.display = 'block'
+        document.getElementById("upload2").style.display = 'block'
+        document.getElementById("upload3").style.display = 'block'
         document.getElementById("upload4").style.display = 'block'
     }
     
@@ -195,27 +195,19 @@
                             <!--Contains all file uploads-->
                             <div>
                                 <div id="upload1">
+                                    <label for="oneFile">File 1</label>
                                     <input type="file" name="oneFile" id="oneFile">
                                 </div>
                                 <div id="upload2">
-                                    <input type="file" name="oneFile" id="oneFile">
-                                    <br>
+                                    <label for="twoFile">File 2</label>
                                     <input type="file" name="twoFile" id="twoFile">
                                 </div>
                                 <div id="upload3">
-                                    <input type="file" name="oneFile" id="oneFile">
-                                    <br>
-                                    <input type="file" name="twoFile" id="twoFile">
-                                    <br>
+                                    <label for="threeFile">File 3</label>
                                     <input type="file" name="threeFile" id="threeFile">
                                 </div>
                                 <div id="upload4">
-                                    <input type="file" name="oneFile" id="oneFile">
-                                    <br>
-                                    <input type="file" name="twoFile" id="twoFile">
-                                    <br>
-                                    <input type="file" name="threeFile" id="threeFile">
-                                    <br>
+                                    <label for="fourFile">File 4</label>
                                     <input type="file" name="fourFile" id="fourFile">
                                 </div>
                             </div>
