@@ -236,8 +236,10 @@
                             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                 $name                   = $r[ "name" ];
                                 $code				    = $r[ "code" ];
+                                $filesPrint				= $r[ "files" ];
                                 echo "<tr>";
                                 echo "<td>". $name. "</td>";
+                                echo "<td>". $filesPrint. "</td>";
                                 echo "<td>". $code. "</td>";
                                 echo "</tr>";
                             }
