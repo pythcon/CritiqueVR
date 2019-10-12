@@ -140,7 +140,7 @@ function createRoomCode(){
 }
 
 function uploadFiles($num, $code, &$filesArray){
-    $target_dir = "uploads/".$code;
+    $target_dir = "uploads/".$code."/";
     $target_file = $target_dir . basename($_FILES["oneFile"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -167,6 +167,7 @@ function uploadFiles($num, $code, &$filesArray){
     } else {
         if (move_uploaded_file($_FILES["oneFile"]["tmp_name"], $target_file)) {
             echo "The file ". basename( $_FILES["oneFile"]["name"]). " has been uploaded.";
+            array_push($filesArray,$target_dir.$target_file);
         } else {
             die("Sorry, there was an error uploading your file.");
         }
@@ -199,6 +200,7 @@ function uploadFiles($num, $code, &$filesArray){
         } else {
             if (move_uploaded_file($_FILES["twoFile"]["tmp_name"], $target_file2)) {
                 echo "The file ". basename( $_FILES["twoFile"]["name"]). " has been uploaded.";
+                array_push($filesArray,$target_dir.$target_file2);
             } else {
                 die("Sorry, there was an error uploading your file.");
             }
@@ -231,6 +233,7 @@ function uploadFiles($num, $code, &$filesArray){
         } else {
             if (move_uploaded_file($_FILES["threeFile"]["tmp_name"], $target_file3)) {
                 echo "The file ". basename( $_FILES["threeFile"]["name"]). " has been uploaded.";
+                array_push($filesArray,$target_dir.$target_file3);
             } else {
                 die("Sorry, there was an error uploading your file.");
             }
@@ -263,14 +266,12 @@ function uploadFiles($num, $code, &$filesArray){
         } else {
             if (move_uploaded_file($_FILES["fourFile"]["tmp_name"], $target_file4)) {
                 echo "The file ". basename( $_FILES["fourFile"]["name"]). " has been uploaded.";
+                array_push($filesArray,$target_dir.$target_file4);
             } else {
                 die("Sorry, there was an error uploading your file.");
             }
         }
     }
-    
-    //throw filepaths in array
-    $filesArray = array($target_dir.$target_file,$target_dir.$target_file2,$target_dir.$target_file3,$target_dir.$target_file4);
     
 }
 ?>

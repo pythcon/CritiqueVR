@@ -29,6 +29,7 @@
             mkdir("uploads/".$code."/", 0744);
             
             //initialize $filesArray
+            $filesArray = array();
             uploadFiles($numOfFiles, $code, $filesArray);
             
             //Successfully passed all tests:
