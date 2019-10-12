@@ -31,10 +31,12 @@
             //initialize $filesArray
             $filesArray = array();
             uploadFiles($numOfFiles, $code, $filesArray);
-            echo $filesArray;
             
             //Successfully passed all tests:
-            $s = "INSERT INTO sessions VALUES('$email', '$roomName', '$contentDescription', '$creationReason', '$presentationReason', '$filesArray', '$code', '$numOfFiles')"; 
+            $filesArrayImplode = implode(",", $filesArray);
+            
+
+            $s = "INSERT INTO sessions VALUES('$email', '$roomName', '$contentDescription', '$creationReason', '$presentationReason', '$filesArrayImplode', '$code', '$numOfFiles')"; 
             $t = mysqli_query($db,$s); 
             
             echo"
