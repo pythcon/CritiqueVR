@@ -90,21 +90,21 @@
         document.getElementById("upload4").style.display = 'none'
     }
     function show2Upload(){
-        document.getElementById("upload1").style.display = 'block'
+        document.getElementById("upload1").style.display = 'none'
         document.getElementById("upload2").style.display = 'block'
         document.getElementById("upload3").style.display = 'none'
         document.getElementById("upload4").style.display = 'none'
     }
     function show3Upload(){
-        document.getElementById("upload1").style.display = 'block'
-        document.getElementById("upload2").style.display = 'block'
+        document.getElementById("upload1").style.display = 'none'
+        document.getElementById("upload2").style.display = 'none'
         document.getElementById("upload3").style.display = 'block'
         document.getElementById("upload4").style.display = 'none'
     }
     function show4Upload(){
-        document.getElementById("upload1").style.display = 'block'
-        document.getElementById("upload2").style.display = 'block'
-        document.getElementById("upload3").style.display = 'block'
+        document.getElementById("upload1").style.display = 'none'
+        document.getElementById("upload2").style.display = 'none'
+        document.getElementById("upload3").style.display = 'none'
         document.getElementById("upload4").style.display = 'block'
     }
     
@@ -182,13 +182,13 @@
                             <div id="radioUpload">
                                 <span>How many pieces will you be uploading?</span>
                                 <br>
-                                <input type="radio" name="piece" id="piece" value="1" checked="checked" onclick="show1Upload">
+                                <input type="radio" name="piece" id="piece" value="1" checked="checked" onclick="show1Upload();">
                                     1&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="2" onclick="show2Upload">
+                                <input type="radio" name="piece" id="piece" value="2" onclick="show2Upload();">
                                     2&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="3" onclick="show3Upload">
+                                <input type="radio" name="piece" id="piece" value="3" onclick="show3Upload();">
                                     3&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" value="4" onclick="show4Upload">
+                                <input type="radio" name="piece" id="piece" value="4" onclick="show4Upload();">
                                     4
                             </div>
                             
@@ -199,17 +199,23 @@
                                 </div>
                                 <div id="upload2">
                                     <input type="file" name="oneFile" id="oneFile">
+                                    <br>
                                     <input type="file" name="twoFile" id="twoFile">
                                 </div>
                                 <div id="upload3">
                                     <input type="file" name="oneFile" id="oneFile">
+                                    <br>
                                     <input type="file" name="twoFile" id="twoFile">
+                                    <br>
                                     <input type="file" name="threeFile" id="threeFile">
                                 </div>
                                 <div id="upload4">
                                     <input type="file" name="oneFile" id="oneFile">
+                                    <br>
                                     <input type="file" name="twoFile" id="twoFile">
+                                    <br>
                                     <input type="file" name="threeFile" id="threeFile">
+                                    <br>
                                     <input type="file" name="fourFile" id="fourFile">
                                 </div>
                             </div>
