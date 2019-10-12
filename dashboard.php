@@ -83,6 +83,31 @@
         }
     }
     
+    function show1Upload(){
+        document.getElementById("upload1").style.display = 'block'
+        document.getElementById("upload2").style.display = 'none'
+        document.getElementById("upload3").style.display = 'none'
+        document.getElementById("upload4").style.display = 'none'
+    }
+    function show2Upload(){
+        document.getElementById("upload1").style.display = 'block'
+        document.getElementById("upload2").style.display = 'block'
+        document.getElementById("upload3").style.display = 'none'
+        document.getElementById("upload4").style.display = 'none'
+    }
+    function show3Upload(){
+        document.getElementById("upload1").style.display = 'block'
+        document.getElementById("upload2").style.display = 'block'
+        document.getElementById("upload3").style.display = 'block'
+        document.getElementById("upload4").style.display = 'none'
+    }
+    function show4Upload(){
+        document.getElementById("upload1").style.display = 'block'
+        document.getElementById("upload2").style.display = 'block'
+        document.getElementById("upload3").style.display = 'block'
+        document.getElementById("upload4").style.display = 'block'
+    }
+    
 </script>
 <!-------------------------------------------------------------------------------------------->
 	
@@ -157,13 +182,13 @@
                             <div id="radioUpload">
                                 <span>How many pieces will you be uploading?</span>
                                 <br>
-                                <input type="radio" name="piece" id="piece" value="1" class="desc" checked="checked">
+                                <input type="radio" name="piece" id="piece" value="1" checked="checked" onclick="show1Upload">
                                     1&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" class="desc" value="2">
+                                <input type="radio" name="piece" id="piece" value="2" onclick="show2Upload">
                                     2&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" class="desc" value="3">
+                                <input type="radio" name="piece" id="piece" value="3" onclick="show3Upload">
                                     3&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="radio" name="piece" id="piece" class="desc" value="4">
+                                <input type="radio" name="piece" id="piece" value="4" onclick="show4Upload">
                                     4
                             </div>
                             
@@ -188,15 +213,8 @@
                                     <input type="file" name="fourFile" id="fourFile">
                                 </div>
                             </div>
-                            
                             <script>
-                                $(document).ready(function() {
-                                    $("input[name$='piece']").click(function() {
-                                        var test = $(this).val();
-                                        $("div.desc").hide();
-                                        $("#upload" + test).show();
-                                    });
-                                });
+                                
                             </script>
                             <!--End file uploads-->
                             
