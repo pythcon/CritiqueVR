@@ -26,7 +26,7 @@
             $numOfFiles = (int)$numOfFiles;
 
             //create session directory
-            mkdir("uploads/".$code, 0744);
+            mkdir("uploads/".$code."/", 0744);
             
             //initialize $filesArray
             uploadFiles($numOfFiles, $code, $filesArray);
