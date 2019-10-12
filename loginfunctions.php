@@ -150,16 +150,16 @@ function uploadFiles($num, $code, &$filesArray){
         $uploadOk = 0;
     }
     // Check file size
-    if ($_FILES["oneFile"]["size"] > 500000) {
+    if ($_FILES["oneFile"]["size"] > 5000000) {
         die("Sorry, your file is too large.");
         $uploadOk = 0;
     }
     // Allow certain file formats
-    /*if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
     && $imageFileType != "gif" ) {
         die("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
         $uploadOk = 0;
-    }*/
+    }
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
         die("File(s) could not be uploaded.");
@@ -183,7 +183,7 @@ function uploadFiles($num, $code, &$filesArray){
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["twoFile"]["size"] > 500000) {
+        if ($_FILES["twoFile"]["size"] > 5000000) {
             die("Sorry, your file is too large.");
             $uploadOk = 0;
         }
@@ -216,7 +216,7 @@ function uploadFiles($num, $code, &$filesArray){
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["threeFile"]["size"] > 500000) {
+        if ($_FILES["threeFile"]["size"] > 5000000) {
             die("Sorry, your file is too large.");
             $uploadOk = 0;
         }
@@ -249,7 +249,7 @@ function uploadFiles($num, $code, &$filesArray){
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["fourFile"]["size"] > 500000) {
+        if ($_FILES["fourFile"]["size"] > 5000000) {
             die("Sorry, your file is too large.");
             $uploadOk = 0;
         }

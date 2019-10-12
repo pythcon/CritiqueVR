@@ -34,7 +34,6 @@
             
             //Successfully passed all tests:
             $filesArrayImplode = implode(",", $filesArray);
-            
 
             $s = "INSERT INTO sessions VALUES('$email', '$roomName', '$contentDescription', '$creationReason', '$presentationReason', '$filesArrayImplode', '$code', '$numOfFiles')"; 
             $t = mysqli_query($db,$s); 
