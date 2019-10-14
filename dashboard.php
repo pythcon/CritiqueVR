@@ -233,6 +233,7 @@
                             $t = mysqli_query($db,$s) or die("Error loading SQL Table.");
                             echo "Current Active Sessions: <b>".mysqli_num_rows($t). "</b>";
                             echo "<table border=2 cellpadding=10>";
+                            echo "<tr><td><b>Room Name</b></td><td><b>Room Code</b></td></tr>";
                             while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
                                 $name                   = $r[ "name" ];
                                 $code				    = $r[ "code" ];

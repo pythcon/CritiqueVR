@@ -140,7 +140,7 @@ function createRoomCode(){
 }
 
 function uploadFiles($num, $code, &$filesArray){
-    $target_dir = "uploads/".$code;
+    $target_dir = "uploads/".$code."/";
     $target_file = $target_dir . basename($_FILES["oneFile"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -150,16 +150,16 @@ function uploadFiles($num, $code, &$filesArray){
         $uploadOk = 0;
     }
     // Check file size
-    if ($_FILES["oneFile"]["size"] > 500000) {
+    if ($_FILES["oneFile"]["size"] > 5000000) {
         die("Sorry, your file is too large.");
         $uploadOk = 0;
     }
     // Allow certain file formats
-    /*if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
     && $imageFileType != "gif" ) {
         die("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
         $uploadOk = 0;
-    }*/
+    }
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
         die("File(s) could not be uploaded.");
@@ -167,6 +167,7 @@ function uploadFiles($num, $code, &$filesArray){
     } else {
         if (move_uploaded_file($_FILES["oneFile"]["tmp_name"], $target_file)) {
             echo "The file ". basename( $_FILES["oneFile"]["name"]). " has been uploaded.";
+            array_push($filesArray,$target_file);
         } else {
             die("Sorry, there was an error uploading your file.");
         }
@@ -182,7 +183,7 @@ function uploadFiles($num, $code, &$filesArray){
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["twoFile"]["size"] > 500000) {
+        if ($_FILES["twoFile"]["size"] > 5000000) {
             die("Sorry, your file is too large.");
             $uploadOk = 0;
         }
@@ -199,6 +200,7 @@ function uploadFiles($num, $code, &$filesArray){
         } else {
             if (move_uploaded_file($_FILES["twoFile"]["tmp_name"], $target_file2)) {
                 echo "The file ". basename( $_FILES["twoFile"]["name"]). " has been uploaded.";
+                array_push($filesArray,$target_file2);
             } else {
                 die("Sorry, there was an error uploading your file.");
             }
@@ -214,7 +216,7 @@ function uploadFiles($num, $code, &$filesArray){
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["threeFile"]["size"] > 500000) {
+        if ($_FILES["threeFile"]["size"] > 5000000) {
             die("Sorry, your file is too large.");
             $uploadOk = 0;
         }
@@ -231,6 +233,7 @@ function uploadFiles($num, $code, &$filesArray){
         } else {
             if (move_uploaded_file($_FILES["threeFile"]["tmp_name"], $target_file3)) {
                 echo "The file ". basename( $_FILES["threeFile"]["name"]). " has been uploaded.";
+                array_push($filesArray,$target_file3);
             } else {
                 die("Sorry, there was an error uploading your file.");
             }
@@ -246,7 +249,7 @@ function uploadFiles($num, $code, &$filesArray){
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["fourFile"]["size"] > 500000) {
+        if ($_FILES["fourFile"]["size"] > 5000000) {
             die("Sorry, your file is too large.");
             $uploadOk = 0;
         }
@@ -263,14 +266,12 @@ function uploadFiles($num, $code, &$filesArray){
         } else {
             if (move_uploaded_file($_FILES["fourFile"]["tmp_name"], $target_file4)) {
                 echo "The file ". basename( $_FILES["fourFile"]["name"]). " has been uploaded.";
+                array_push($filesArray,$target_file4);
             } else {
                 die("Sorry, there was an error uploading your file.");
             }
         }
     }
-    
-    //throw filepaths in array
-    $filesArray = array($target_dir.$target_file,$target_dir.$target_file2,$target_dir.$target_file3,$target_dir.$target_file4);
     
 }
 ?>
