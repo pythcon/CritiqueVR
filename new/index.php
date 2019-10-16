@@ -1,7 +1,6 @@
 <!Doctype HTML>
 <html>
     <head>
-        //import
         <link rel="stylesheet" href="animate.min.css">
         <link rel="stylesheet" href="css/style.css">
         
