@@ -10,6 +10,18 @@ body {
   padding: 100px 20px;
 }
 
+nav {
+  z-index: 9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
 .bg-color {
   background-color: #46a1de;
   transition-duration: .5s;
@@ -155,4 +167,47 @@ footer {
 }
 .colors > li:nth-child(5) {
   background-color: #bdc3c7;
+}
+
+/*Todd Code*/
+/*Welcome Info*/
+.welcomeInfoContainer{
+    width: 50%;
+    float: left;
+}
+.welcomeInfo{
+    width: 90%;
+    float: left;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+
+/*Login*/
+.loginContainer{
+    width: 50%;
+    float: left;
+    height: 100px;
+}
+/*Sign In*/
+.signInContainer{
+    float: left;
+    width: 48%;
+}
+.signInBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+/*Sign Up*/
+.signUpContainer{
+    float: right;
+    width: 48%;
+}
+.signUpBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
 }
