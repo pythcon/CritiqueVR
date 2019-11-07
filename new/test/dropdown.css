@@ -1,0 +1,38 @@
+p.italic { 
+font-size: 150%;
+line-height: 50px;
+font-style:italic;
+}
+
+p { 
+font-size: 100%;
+line-height: 25px;
+}
+
+h1 { 
+font-size: 400%;
+}
+
+#signInBtn {
+transition: all 2s ease;
+overflow: hidden;
+}
+
+#signInForm {
+transition: all 2s ease;
+line-height: normal;
+display: none;
+transition: all 2s ease;
+}
+
+#signUpBtn {
+transition: all 2s ease;
+overflow: hidden;
+}
+
+#signUpForm {
+transition: all 2s ease;
+line-height: normal;
+display: none;
+transition: all 2s ease;
+}

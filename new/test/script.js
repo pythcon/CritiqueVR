@@ -10,7 +10,7 @@ $(document).ready(function(){
 	activeTab.show();
 	
 	// Set height of wrapper on page load
-	tabWrapper.height(activeTabHeight + 30);
+	tabWrapper.height(activeTabHeight);
 	
 	$(".tabs > li").on("click", function() {
 		

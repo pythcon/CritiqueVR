@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Adaptive tabs</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'><link rel="stylesheet" href="./style.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./dropdown.css">
 
 </head>
 <body>
@@ -35,26 +37,48 @@
                 <div class="welcomeInfoContainer">
                     <div class="welcomeInfo">
                         <h2 class="text-color">A little bit about VReview</h2>
-                        This will contain all of the welcome info.
-                        <br>
-                        Info about us?
-                        <br>
-                        Info about the app?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         <br>&nbsp;
                     </div>
                 </div>
                 <div class="loginContainer">
                     <div class="signInContainer">
-                        <div class="signInBtn">
-                            Sign In
+                        <div class="signInBtn" id="signInBtn">
+                            <h4 onclick="expandSignIn()">Sign In</h4>
+                            <br>
+                            <div id="signInForm">
+                                <label>Email:</label><br>
+                                <input type="text" id="email">
+                                <br>
+                                <label>Password:</label><br>
+                                <input type="password" id="password">
+                                <input type="submit">
+                            </div>
                         </div>
                     </div>
+                    
                     <div class="signUpContainer">
-                        <div class="signUpBtn">
-                            Sign Up
+                        <div class="signUpBtn" id="signUpBtn">
+                            <h4 onclick="expandSignUp()">Sign Up</h4>
+                            <br>
+                            <div id="signUpForm">
+                                <label>First Name:</label><br>
+                                <input type="text" id="firstName">
+                                <br>
+                                <label>Last Name:</label><br>
+                                <input type="text" id="lastName">
+                                <br>
+                                <label>Email:</label><br>
+                                <input type="text" id="email">
+                                <br>
+                                <label>Password:</label><br>
+                                <input type="password" id="password">
+                                <input type="submit" >
+                            </div>
                         </div>
                     </div>
                 </div>
+                <script src="dropdown.js"></script>
 			</div>
 		</li>
 		<li>
