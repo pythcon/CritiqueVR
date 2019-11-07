@@ -170,12 +170,17 @@ footer {
 }
 
 /*Todd Code*/
+
 /*Welcome Info*/
 .welcomeInfoContainer{
     width: 50%;
     float: left;
     margin-bottom: 20px;
 }
+.welcomeInfoContainer h2{
+    padding-top: 10px;
+}
+
 .welcomeInfo{
     width: 90%;
     float: left;
@@ -183,6 +188,11 @@ footer {
     color: white;
     border-radius: 30px;
 }
+.welcomeInfoText{
+    padding-left:  10px;
+    padding-right:  10px;
+}
+/*End Welcome Info*/
 
 /*Login*/
 .loginContainer{
@@ -190,6 +200,8 @@ footer {
     float: left;
     height: 100px;
 }
+/*End Login*/
+
 /*Sign In*/
 .signInContainer{
     float: left;
@@ -204,6 +216,8 @@ footer {
 .signInBtn h4{
     margin-top: 10px;
 }
+/*End Sign In*/
+
 /*Sign Up*/
 .signUpContainer{
     float: right;
@@ -218,3 +232,70 @@ footer {
 .signUpBtn h4{
     margin-top: 10px;
 }
+/*End Sign Up*/
+
+/*ACCOUNTS PAGE*/
+
+/*Account Info*/
+.accountInfoContainer{
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
+}
+.accountInfoContainer h2{
+    padding-top: 10px;
+}
+
+.accountInfo{
+    width: 90%;
+    float: left;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.accountInfoText{
+    padding-left:  10px;
+    padding-right:  10px;
+}
+/*End Account Info*/
+
+/*Account Options*/
+.accountOptionsContainer{
+    width: 50%;
+    float: left;
+    height: 100px;
+}
+/*End Account Options*/
+
+/*Create Room*/
+.createRoomContainer{
+    float: left;
+    width: 48%;
+}
+.createRoomBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.createRoomBtn h4{
+    margin-top: 10px;
+}
+/*End Create Room*/
+
+/*My Rooms*/
+.myRoomsContainer{
+    float: right;
+    width: 48%;
+}
+.myRoomsBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.myRoomsBtn h4{
+    margin-top: 10px;
+}
+/*End My Rooms*/
+

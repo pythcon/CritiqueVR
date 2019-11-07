@@ -7,3 +7,13 @@ function expandSignUp(){
     document.getElementById("signUpBtn").style.height= "265px";
     document.getElementById("signUpForm").style.display= "block";
 }
+
+function expandMyRooms(){
+    document.getElementById("myRoomsBtn").style.height= "265px";
+    document.getElementById("myRoomsForm").style.display= "block";
+}
+
+function expandChangePassword(){
+    document.getElementById("changePasswordBtn").style.height= "265px";
+    document.getElementById("changePasswordForm").style.display= "block";
+}
