@@ -364,6 +364,7 @@ footer {
     width: 50%;*/
 }
 .fileUploadBtn{
+    display: none;
     height: 50px;
     background-color: #23411a;
     color: white;
@@ -373,3 +374,84 @@ footer {
     margin-top: 13px;
 }
 /*End Create Room*/
+
+/*Done Button*/
+.doneBtn{
+    display: none;
+    height: 50px;
+    width: 50%;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+    margin-top: 200px;
+    margin-left: 25%;
+}
+.doneBtn h4{
+    margin-top: 13px;
+}
+/*End Done Button*/
+
+/*PIN PAGE*/
+
+/*Pin Info*/
+.pinContainer{
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
+}
+.pinContainer h2{
+    padding-top: 10px;
+}
+
+.pinInfo{
+    width: 90%;
+    float: left;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.pinText{
+    padding-left:  10px;
+    padding-right:  10px;
+}
+/*End Pin Info*/
+
+/*Double Check*/
+.doubleCheckContainer{
+    width: 50%;
+    float: left;
+    height: 100px;
+}
+/*End Double Check*/
+
+/*Perfect*/
+.perfectContainer{
+    float: left;
+    width: 48%;
+}
+.perfectBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.perfectBtn h4{
+    margin-top: 13px;
+}
+/*End Perfect*/
+
+/*Go Back*/
+.goBackContainer{
+    float: right;
+    width: 48%;
+}
+.goBackBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.goBackBtn h4{
+    margin-top: 13px;
+}
+/*End Go Back*/

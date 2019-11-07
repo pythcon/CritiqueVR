@@ -1,82 +1,115 @@
 p.italic { 
-font-size: 150%;
-line-height: 50px;
-font-style:italic;
+    font-size: 150%;
+    line-height: 50px;
+    font-style:italic;
 }
 
 p { 
-font-size: 100%;
-line-height: 25px;
+    font-size: 100%;
+    line-height: 25px;
 }
 
 h1 { 
-font-size: 400%;
+    font-size: 400%;
 }
 
 /*WELCOME PAGE*/
 #signInBtn {
-transition: all 2s ease;
-overflow: hidden;
+    transition: all 2s ease;
+    overflow: hidden;
 }
 
 #signInForm {
-transition: all 2s ease;
-line-height: normal;
-display: none;
-transition: all 2s ease;
+    transition: all 2s ease;
+    line-height: normal;
+    display: none;
+    transition: all 2s ease;
 }
 
 #signUpBtn {
-transition: all 2s ease;
-overflow: hidden;
+    transition: all 2s ease;
+    overflow: hidden;
 }
 
 #signUpForm {
-transition: all 2s ease;
-line-height: normal;
-display: none;
-transition: all 2s ease;
+    transition: all 2s ease;
+    line-height: normal;
+    display: none;
+    transition: all 2s ease;
 }
 
 /*ACCOUNT PAGE*/
 
 #createRoomBtn {
-transition: all 2s ease;
-overflow: hidden;
+    transition: all 2s ease;
+    overflow: hidden;
 }
 
 #myRoomsBtn {
-transition: all 2s ease;
-overflow: hidden;
+    transition: all 2s ease;
+    overflow: hidden;
 }
 
 #myRoomsForm {
-transition: all 2s ease;
-line-height: normal;
-display: none;
-transition: all 2s ease;
+    transition: all 2s ease;
+    line-height: normal;
+    display: none;
+    transition: all 2s ease;
 }
 
 #changePasswordBtn {
-transition: all 2s ease;
-overflow: hidden;
+    transition: all 2s ease;
+    overflow: hidden;
 }
 
 #changePasswordForm {
-transition: all 2s ease;
-line-height: normal;
-display: none;
-transition: all 2s ease;
+    transition: all 2s ease;
+    line-height: normal;
+    display: none;
+    transition: all 2s ease;
 }
 
 #fileUploadBtn {
-transition: all 2s ease;
-overflow: hidden;
+    transition: all 2s ease;
+    overflow: hidden;
 }
 
 #fileUploadForm {
-transition: all 2s ease;
-line-height: normal;
-display: none;
-transition: all 2s ease;
+    transition: all 2s ease;
+    line-height: normal;
+    display: none;
+    transition: all 2s ease;
+}
+
+#doneBtn{
+    transition: all 2s ease;
+    overflow: hidden;
+}
+#doneBtnForm{
+    transition: all 2s ease;
+    line-height: normal;
+    display: none;
+    transition: all 2s ease;
+}
+
+#perfectBtn{
+    transition: all 2s ease;
+    overflow: hidden;
+}
+#perfectBtnForm{
+    transition: all 2s ease;
+    line-height: normal;
+    display: none;
+    transition: all 2s ease;
+}
+
+#goBackBtn{
+    transition: all 2s ease;
+    overflow: hidden;
+}
+#goBackBtnForm{
+    transition: all 2s ease;
+    line-height: normal;
+    display: none;
+    transition: all 2s ease;
 }
