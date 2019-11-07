@@ -18,3 +18,7 @@ function expandChangePassword(){
     document.getElementById("changePasswordForm").style.display= "block";
 }
 
+function expandFileUpload(){
+    document.getElementById("fileUploadBtn").style.height= "225px";
+    document.getElementById("fileUploadForm").style.display= "block";
+}

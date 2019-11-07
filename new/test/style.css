@@ -316,3 +316,60 @@ footer {
     margin-top: 4px;
 }
 /*End Change Password*/
+
+/*ROOM CREATION PAGE*/
+
+/*Room Creation Input*/
+.roomCreationInputContainer{
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
+}
+/*End Account Options*/
+
+/*Create Room*/
+.roomCreationContainer{
+    float: left;
+    width: 32%;
+}
+.roomCreationInfo{
+    width: 90%;
+    float: left;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.roomCreationBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.roomCreationBtn h4{
+    margin-top: 13px;
+}
+/*End Create Room*/
+
+/*Room Creation File Upload*/
+.roomCreationFileContainer{
+    width: 50%;
+    float: left;
+    height: 100px;
+}
+/*End Account Options*/
+
+/*Create Room*/
+.fileUploadContainer{
+    /*float: left;
+    width: 50%;*/
+}
+.fileUploadBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.fileUploadBtn h4{
+    margin-top: 13px;
+}
+/*End Create Room*/
