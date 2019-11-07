@@ -214,7 +214,7 @@ footer {
     border-radius: 30px;
 }
 .signInBtn h4{
-    margin-top: 10px;
+    margin-top: 13px;
 }
 /*End Sign In*/
 
@@ -230,7 +230,7 @@ footer {
     border-radius: 30px;
 }
 .signUpBtn h4{
-    margin-top: 10px;
+    margin-top: 13px;
 }
 /*End Sign Up*/
 
@@ -256,6 +256,7 @@ footer {
 .accountInfoText{
     padding-left:  10px;
     padding-right:  10px;
+    font-size: 20px;
 }
 /*End Account Info*/
 
@@ -270,7 +271,7 @@ footer {
 /*Create Room*/
 .createRoomContainer{
     float: left;
-    width: 48%;
+    width: 32%;
 }
 .createRoomBtn{
     height: 50px;
@@ -279,14 +280,15 @@ footer {
     border-radius: 30px;
 }
 .createRoomBtn h4{
-    margin-top: 10px;
+    margin-top: 13px;
 }
 /*End Create Room*/
 
 /*My Rooms*/
 .myRoomsContainer{
-    float: right;
-    width: 48%;
+    float: left;
+    width: 32%;
+    margin:0 2%;
 }
 .myRoomsBtn{
     height: 50px;
@@ -295,7 +297,22 @@ footer {
     border-radius: 30px;
 }
 .myRoomsBtn h4{
-    margin-top: 10px;
+    margin-top: 13px;
 }
 /*End My Rooms*/
 
+/*Change Password*/
+.changePasswordContainer{
+    float: left;
+    width: 32%;
+}
+.changePasswordBtn{
+    height: 50px;
+    background-color: #23411a;
+    color: white;
+    border-radius: 30px;
+}
+.changePasswordBtn h4{
+    margin-top: 4px;
+}
+/*End Change Password*/

@@ -50,10 +50,10 @@
                             <br>
                             <div id="signInForm">
                                 <label>Email:</label><br>
-                                <input type="text" id="email">
+                                <input type="text" id="email" placeholder="example@example.com">
                                 <br>
                                 <label>Password:</label><br>
-                                <input type="password" id="password">
+                                <input type="password" id="password" placeholder="Password">
                                 <input type="submit">
                             </div>
                         </div>
@@ -65,16 +65,16 @@
                             <br>
                             <div id="signUpForm">
                                 <label>First Name:</label><br>
-                                <input type="text" id="firstName">
+                                <input type="text" id="firstName" placeholder="Johnny">
                                 <br>
                                 <label>Last Name:</label><br>
-                                <input type="text" id="lastName">
+                                <input type="text" id="lastName" placeholder="Appleseed">
                                 <br>
                                 <label>Email:</label><br>
-                                <input type="text" id="email">
+                                <input type="text" id="email" placeholder="example@example.com">
                                 <br>
                                 <label>Password:</label><br>
-                                <input type="password" id="password">
+                                <input type="password" id="password" placeholder="Password">
                                 <input type="submit" >
                             </div>
                         </div>
@@ -90,7 +90,11 @@
                     <div class="accountInfo">
                         <h2 class="text-color">Hello, INSERT NAME</h2>
                         <div class="accountInfoText">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            We let you create Virtual Reality rooms to host mid or final reviews to get input, narrow down ideas or discuss the final product.
+                            <br><br>
+                            <b>All while being able to save the room and look back at it in the future.</b>
+                            <br><br>
+                            You give us the information, we do the work!
                         </div>
                         <br>&nbsp;
                     </div>
@@ -101,7 +105,6 @@
                             <h4 onclick="TAKE TO NEXT TAB">Create Room</h4>
                         </div>
                     </div>
-                    
                     <div class="myRoomsContainer">
                         <div class="myRoomsBtn" id="myRoomsBtn">
                             <h4 onclick="expandMyRooms()">My Rooms</h4>
@@ -129,6 +132,20 @@
                                         </tr>
                                     </table>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="changePasswordContainer">
+                        <div class="changePasswordBtn" id="changePasswordBtn">
+                            <h4 onclick="expandChangePassword()">Change Password</h4>
+                            <br>
+                            <div id="changePasswordForm">
+                                <label>Password:</label><br>
+                                <input type="password" id="passwordChange1" placeholder="Password">
+                                <br>
+                                <label>Confirm Password:</label><br>
+                                <input type="password" id="passwordChange2" placeholder="Confirm Password">
+                                <input type="submit">
                             </div>
                         </div>
                     </div>

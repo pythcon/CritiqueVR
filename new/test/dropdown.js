@@ -14,6 +14,7 @@ function expandMyRooms(){
 }
 
 function expandChangePassword(){
-    document.getElementById("changePasswordBtn").style.height= "265px";
+    document.getElementById("changePasswordBtn").style.height= "225px";
     document.getElementById("changePasswordForm").style.display= "block";
 }
+

@@ -40,12 +40,29 @@ transition: all 2s ease;
 
 /*ACCOUNT PAGE*/
 
+#createRoomBtn {
+transition: all 2s ease;
+overflow: hidden;
+}
+
 #myRoomsBtn {
 transition: all 2s ease;
 overflow: hidden;
 }
 
 #myRoomsForm {
+transition: all 2s ease;
+line-height: normal;
+display: none;
+transition: all 2s ease;
+}
+
+#changePasswordBtn {
+transition: all 2s ease;
+overflow: hidden;
+}
+
+#changePasswordForm {
 transition: all 2s ease;
 line-height: normal;
 display: none;
