@@ -1,20 +1,24 @@
 function expandSignIn(){
     document.getElementById("signInBtn").style.height= "175px";
+    document.getElementById("signInBtn").style.backgroundColor= "#ECC261";
     document.getElementById("signInForm").style.display= "block";
 }
 
 function expandSignUp(){
     document.getElementById("signUpBtn").style.height= "265px";
+    document.getElementById("signUpBtn").style.backgroundColor= "#ECC261";
     document.getElementById("signUpForm").style.display= "block";
 }
 
 function expandMyRooms(){
     document.getElementById("myRoomsBtn").style.height= "265px";
+    document.getElementById("myRoomsBtn").style.backgroundColor= "#ECC261";
     document.getElementById("myRoomsForm").style.display= "block";
 }
 
 function expandChangePassword(){
     document.getElementById("changePasswordBtn").style.height= "225px";
+    document.getElementById("changePasswordBtn").style.backgroundColor= "#ECC261";
     document.getElementById("changePasswordForm").style.display= "block";
 }
 

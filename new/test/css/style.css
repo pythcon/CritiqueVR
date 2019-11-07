@@ -184,7 +184,7 @@ footer {
 .welcomeInfo{
     width: 90%;
     float: left;
-    background-color: #23411a;
+    background-color: #609DB4;
     color: white;
     border-radius: 30px;
 }
@@ -209,12 +209,17 @@ footer {
 }
 .signInBtn{
     height: 50px;
-    background-color: #23411a;
-    color: white;
+    background-color: #fff;
+    color: #523F2C;
     border-radius: 30px;
+    border-color: #ECC261;
+    border-style: solid;
 }
 .signInBtn h4{
     margin-top: 13px;
+}
+.signInBtn:hover {
+	background-color: #ECC261;
 }
 /*End Sign In*/
 
@@ -225,12 +230,17 @@ footer {
 }
 .signUpBtn{
     height: 50px;
-    background-color: #23411a;
-    color: white;
+    background-color: #fff;
+    color: #523F2C;
     border-radius: 30px;
+    border-color: #ECC261;
+    border-style: solid;
 }
 .signUpBtn h4{
     margin-top: 13px;
+}
+.signUpBtn:hover {
+	background-color: #ECC261;
 }
 /*End Sign Up*/
 
@@ -249,7 +259,7 @@ footer {
 .accountInfo{
     width: 90%;
     float: left;
-    background-color: #23411a;
+    background-color: #609DB4;
     color: white;
     border-radius: 30px;
 }
@@ -275,12 +285,18 @@ footer {
 }
 .createRoomBtn{
     height: 50px;
-    background-color: #23411a;
-    color: white;
+    background-color: #fff;
+    color: #523F2C;
     border-radius: 30px;
+    border-color: #ECC261;
+    border-style: solid;
 }
 .createRoomBtn h4{
     margin-top: 13px;
+}
+
+.createRoomBtn:hover {
+	background-color: #ECC261;
 }
 /*End Create Room*/
 
@@ -292,12 +308,17 @@ footer {
 }
 .myRoomsBtn{
     height: 50px;
-    background-color: #23411a;
-    color: white;
+    background-color: #fff;
+    color: #523F2C;
     border-radius: 30px;
+    border-color: #ECC261;
+    border-style: solid;
 }
 .myRoomsBtn h4{
     margin-top: 13px;
+}
+.myRoomsBtn:hover {
+	background-color: #ECC261;
 }
 /*End My Rooms*/
 
@@ -308,12 +329,17 @@ footer {
 }
 .changePasswordBtn{
     height: 50px;
-    background-color: #23411a;
-    color: white;
+    background-color: #fff;
+    color: #523F2C;
     border-radius: 30px;
+    border-color: #ECC261;
+    border-style: solid;
 }
 .changePasswordBtn h4{
-    margin-top: 4px;
+    margin-top: 3px;
+}
+.changePasswordBtn:hover {
+	background-color: #ECC261;
 }
 /*End Change Password*/
 
@@ -335,18 +361,21 @@ footer {
 .roomCreationInfo{
     width: 90%;
     float: left;
-    background-color: #23411a;
+    background-color: #609DB4;
     color: white;
     border-radius: 30px;
 }
 .roomCreationBtn{
     height: 50px;
-    background-color: #23411a;
+    background-color: #609DB4;
     color: white;
     border-radius: 30px;
 }
 .roomCreationBtn h4{
     margin-top: 13px;
+}
+.roomCreationBtn:hover {
+	background-color: #ECC261;
 }
 /*End Create Room*/
 
@@ -366,7 +395,7 @@ footer {
 .fileUploadBtn{
     display: none;
     height: 50px;
-    background-color: #23411a;
+    background-color: #609DB4;
     color: white;
     border-radius: 30px;
 }
@@ -380,14 +409,20 @@ footer {
     display: none;
     height: 50px;
     width: 50%;
-    background-color: #23411a;
+    background-color: #fff;
     color: white;
     border-radius: 30px;
     margin-top: 200px;
     margin-left: 25%;
+    border-color: #ECC261;
+    border-style: solid;
+    color: #523F2C;
 }
 .doneBtn h4{
     margin-top: 13px;
+}
+.doneBtn:hover {
+	background-color: #ECC261;
 }
 /*End Done Button*/
 
@@ -406,13 +441,25 @@ footer {
 .pinInfo{
     width: 90%;
     float: left;
-    background-color: #23411a;
     color: white;
     border-radius: 30px;
 }
-.pinText{
-    padding-left:  10px;
-    padding-right:  10px;
+.pinTextTop{
+    padding-top:  20px;
+    padding-left:  15px;
+    padding-right:  15px;
+    padding-bottom:  20px;
+    margin-bottom: 10px;
+    background-color: #609DB4;
+    border-radius: 30px;
+}
+.pinTextBottom{
+    padding-top:  20px;
+    padding-left:  15px;
+    padding-right:  15px;
+    padding-bottom:  20px;
+    background-color: #609DB4;
+    border-radius: 30px;
 }
 /*End Pin Info*/
 
@@ -431,12 +478,17 @@ footer {
 }
 .perfectBtn{
     height: 50px;
-    background-color: #23411a;
-    color: white;
+    background-color: #fff;
+    color: #523F2C;
     border-radius: 30px;
+    border-color: #ECC261;
+    border-style: solid;
 }
 .perfectBtn h4{
     margin-top: 13px;
+}
+.perfectBtn:hover {
+	background-color: #ECC261;
 }
 /*End Perfect*/
 
@@ -447,11 +499,16 @@ footer {
 }
 .goBackBtn{
     height: 50px;
-    background-color: #23411a;
-    color: white;
+    background-color: #fff;
+    color: #523F2C;
     border-radius: 30px;
+    border-color: #ECC261;
+    border-style: solid;
 }
 .goBackBtn h4{
     margin-top: 13px;
+}
+.goBackBtn:hover {
+	background-color: #ECC261;
 }
 /*End Go Back*/
