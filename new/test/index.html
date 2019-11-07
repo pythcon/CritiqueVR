@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <title>Adaptive tabs</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./dropdown.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  
+  
 
 </head>
 <body>
@@ -156,11 +158,32 @@
 			<div class="content__wrapper">
 				<div class="roomCreationInputContainer">
                     <div class="roomCreationInfo">
-                        <h2 class="text-color">A little bit about VReview</h2>
+                        <h2 class="text-color">Create a room!</h2>
                         <div class="roomCreationInfoText">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            This is the <input type="text" placeholder="Give it a name!"> room.
+                            <br><br>
+                            <div class="radioPresent" id="radioPresent">
+                                <span>I am presenting my...</span>
+                                <br><br>
+                                <input type="radio" name="piece" id="piece" value="1">
+                                    <label>Final Design</label>
+                                <br>
+                                <input type="radio" name="piece" id="piece" value="2">
+                                    <label>Concepts</label>
+                                <br>
+                                <input type="radio" name="piece" id="piece" value="3">
+                                    <label>Story Board</label>
+                                <br>
+                                <input type="radio" name="piece" id="piece" value="4">
+                                    <label>Prototype</label>
+                            </div>
                             <br>
-                            <button onclick="expandFileUpload()">Next</button>
+                            ...because....
+                            <br><br>
+                            <textarea type="text" cols="40" rows="5"></textarea>
+                            <br>
+                            <!--NEXT BUTTON-->
+                            <button data-hover="Lets go!" onclick="expandFileUpload()"><div>Next</div></button>
                         </div>
                         <br>&nbsp;
                     </div>
@@ -171,17 +194,24 @@
                             <h4>File Upload</h4>
                             <br>
                             <div id="fileUploadForm">
-                                <label>Email:</label><br>
-                                <input type="text" id="email" placeholder="example@example.com">
+                                <label for="oneFile">File 1:&nbsp;</label>
+                                <input type="file" name="oneFile" id="oneFile">
                                 <br>
-                                <label>Password:</label><br>
-                                <input type="password" id="password" placeholder="Password">
+                                <label for="twoFile">File 2:&nbsp;</label>
+                                <input type="file" name="twoFile" id="twoFile">
+                                <br>
+                                <label for="threeFile">File 3:&nbsp;</label>
+                                <input type="file" name="threeFile" id="threeFile">
+                                <br>
+                                <label for="fourFile">File 4:&nbsp;</label>
+                                <input type="file" name="fourFile" id="fourFile">
+                                <br>
                                 <input type="submit">
                             </div>
                         </div>
                     </div>
                 </div>
-                <script src="dropdown.js"></script>
+                <script src="js/dropdown.js"></script>
 			</div>
 		</li>
         <li>
@@ -196,7 +226,8 @@
 
 <footer>&copy;Copyright 2019</footer>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='js/script.js'></script>
 
 </body>
 </html>
