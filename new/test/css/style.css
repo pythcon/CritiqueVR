@@ -29,7 +29,7 @@ nav {
 }
 
 .text-color {
-  color: #46a1de;
+  color: #81974F;
   transition-duration: .5s;
 }
 
@@ -58,7 +58,7 @@ footer {
   display: table-cell;
   list-style: none;
   text-align: center;
-  padding: 20px 20px 25px 20px;
+  padding: 30px 20px 25px 20px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -96,7 +96,7 @@ footer {
   background-color: white;
   position: relative;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .tab__content > li {
   width: 100%;
@@ -172,6 +172,16 @@ footer {
 
 /*Todd Code*/
 
+.section-color {
+  color: text-color 
+  color: #81974F;
+  transition-duration: .5s;
+}
+.vReviewTitle{
+    float: left;
+    margin-left: 5%;
+}
+
 /*Welcome Info*/
 .welcomeInfoContainer{
     width: 50%;
@@ -188,6 +198,9 @@ footer {
     background-color: #609DB4;
     color: white;
     border-radius: 30px;
+    padding-top:  20px;
+    padding-left:  10px;
+    padding-right:  10px;
 }
 .welcomeInfoText{
     padding-left:  10px;
@@ -293,7 +306,6 @@ footer {
     border-style: solid;
 }
 .createRoomBtn h4{
-    margin-top: 10px;
 }
 
 .createRoomBtn:hover {

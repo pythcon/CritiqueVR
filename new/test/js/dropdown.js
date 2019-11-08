@@ -41,3 +41,58 @@ function expandPin(){
     document.getElementById("perfectBtn").style.height= "225px";
     document.getElementById("perfectForm").style.display= "block";
 }
+
+function createRoom(){
+    $(document).ready(function() {
+        // Variables
+        var clickedTab = $("#roomCreationTab");
+        var tabWrapper = $(".tab__content");
+        var activeTab = tabWrapper.find(".active");
+        var activeTabHeight = activeTab.outerHeight();
+
+        // Show tab on page load
+        activeTab.show();
+
+        // Set height of wrapper on page load
+        tabWrapper.height(activeTabHeight);
+	
+		
+		// Remove class from active tab
+		$(".tabs > li").removeClass("active");
+		
+		// Add class active to clicked tab
+		$("#roomCreationTab").addClass("active");
+		
+		// Update clickedTab variable
+		clickedTab = $("#roomCreationTab");
+		
+		// fade out active tab
+		activeTab.fadeOut(250, function() {
+			
+			// Remove active class all tabs
+			$("#accountTab").removeClass("active");
+			
+			// Get index of clicked tab
+			var clickedTabIndex = clickedTab.index();
+
+			// Add class active to corresponding tab
+			$("#roomCreationTab").eq(clickedTabIndex).addClass("active");
+			
+			// update new active tab
+			activeTab = $("#roomCreationTab");
+			
+			// Update variable
+			activeTabHeight = activeTab.outerHeight();
+			
+			// Animate height of wrapper to new tab height
+			tabWrapper.stop().delay(50).animate({
+				height: activeTabHeight
+			}, 500, function() {
+				
+				// Fade in active tab
+				activeTab.delay(50).fadeIn(250);
+				
+			});
+		});
+	});
+}
