@@ -8,6 +8,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #50555a;
   padding: 100px 20px;
+  /*background-color: #81974F;*/
 }
 
 nav {
@@ -23,7 +24,7 @@ nav {
 }
 
 .bg-color {
-  background-color: #46a1de;
+  background-color: #81974F;
   transition-duration: .5s;
 }
 
@@ -68,14 +69,14 @@ footer {
   position: absolute;
   content: "";
   width: 100%;
-  height: 120%;
+  height: 300%;
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   transition-duration: .25s;
-  border-radius: 5px 5px 0 0;
+  border-radius: 50% 50%;
 }
 .tabs > li:hover:before {
   -webkit-transform: translateY(70%);
@@ -107,7 +108,7 @@ footer {
 }
 .tab__content > li .content__wrapper {
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
   padding: 45px 40px 40px 40px;
   background-color: white;
@@ -163,7 +164,7 @@ footer {
   background-color: #8e44ad;
 }
 .colors > li:nth-child(4) {
-  background-color: #46a1de;
+  background-color: #81974F;
 }
 .colors > li:nth-child(5) {
   background-color: #bdc3c7;
@@ -216,7 +217,7 @@ footer {
     border-style: solid;
 }
 .signInBtn h4{
-    margin-top: 13px;
+    margin-top: 10px;
 }
 .signInBtn:hover {
 	background-color: #ECC261;
@@ -237,7 +238,7 @@ footer {
     border-style: solid;
 }
 .signUpBtn h4{
-    margin-top: 13px;
+    margin-top: 10px;
 }
 .signUpBtn:hover {
 	background-color: #ECC261;
@@ -292,7 +293,7 @@ footer {
     border-style: solid;
 }
 .createRoomBtn h4{
-    margin-top: 13px;
+    margin-top: 10px;
 }
 
 .createRoomBtn:hover {
@@ -315,7 +316,7 @@ footer {
     border-style: solid;
 }
 .myRoomsBtn h4{
-    margin-top: 13px;
+    margin-top: 10px;
 }
 .myRoomsBtn:hover {
 	background-color: #ECC261;
@@ -336,7 +337,6 @@ footer {
     border-style: solid;
 }
 .changePasswordBtn h4{
-    margin-top: 3px;
 }
 .changePasswordBtn:hover {
 	background-color: #ECC261;
@@ -485,7 +485,7 @@ footer {
     border-style: solid;
 }
 .perfectBtn h4{
-    margin-top: 13px;
+    margin-top: 10px;
 }
 .perfectBtn:hover {
 	background-color: #ECC261;
@@ -506,7 +506,7 @@ footer {
     border-style: solid;
 }
 .goBackBtn h4{
-    margin-top: 13px;
+    margin-top: 10px;
 }
 .goBackBtn:hover {
 	background-color: #ECC261;
