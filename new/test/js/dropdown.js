@@ -76,7 +76,7 @@ function createRoom(){
 			var clickedTabIndex = clickedTab.index();
 
 			// Add class active to corresponding tab
-			$("#roomCreationTab").eq(clickedTabIndex).addClass("active");
+			$("#liCreateRoom").eq(clickedTabIndex).addClass("active");
 			
 			// update new active tab
 			activeTab = $("#roomCreationTab");
