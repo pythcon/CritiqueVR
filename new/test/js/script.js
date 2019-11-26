@@ -73,4 +73,5 @@ $(document).ready(function(){
 		// Change color of everything with class .text-color
 		$(".text-color").css("color", newColor);
 	});
+    
 });

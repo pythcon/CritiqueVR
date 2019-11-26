@@ -43,43 +43,153 @@ function expandPin(){
 }
 
 function createRoom(){
-    $(document).ready(function() {
-        // Variables
-        var clickedTab = $("#roomCreationTab");
-        var tabWrapper = $(".tab__content");
-        var activeTab = tabWrapper.find(".active");
-        var activeTabHeight = activeTab.outerHeight();
-
-        // Show tab on page load
-        activeTab.show();
-
-        // Set height of wrapper on page load
-        tabWrapper.height(activeTabHeight);
+    // Variables
+	var clickedTab = $(".tabs > .active");
+	var tabWrapper = $(".tab__content");
+	var activeTab = tabWrapper.find(".active");
+	var activeTabHeight = activeTab.outerHeight();
 	
+	// Show tab on page load
+	activeTab.show();
+	
+	// Set height of wrapper on page load
+	tabWrapper.height(activeTabHeight);
+	
+	$("#createRoomBtn").on("click", function() {
 		
 		// Remove class from active tab
-		$(".tabs > li").removeClass("active");
+		$(".liAccount").removeClass("active");
 		
 		// Add class active to clicked tab
-		$("#roomCreationTab").addClass("active");
+		$(".liCreateRoom").addClass("active");
 		
 		// Update clickedTab variable
-		clickedTab = $("#roomCreationTab");
+		clickedTab = $(".tabs .active");
 		
 		// fade out active tab
 		activeTab.fadeOut(250, function() {
 			
 			// Remove active class all tabs
-			$("#accountTab").removeClass("active");
+			$(".tab__content > li").removeClass("active");
 			
 			// Get index of clicked tab
 			var clickedTabIndex = clickedTab.index();
 
 			// Add class active to corresponding tab
-			$("#liCreateRoom").eq(clickedTabIndex).addClass("active");
+			$("#roomCreationTab").addClass("active");
 			
 			// update new active tab
-			activeTab = $("#roomCreationTab");
+			activeTab = $(".tab__content > .active");
+			
+			// Update variable
+			activeTabHeight = activeTab.outerHeight();
+			
+			// Animate height of wrapper to new tab height
+			tabWrapper.stop().delay(50).animate({
+				height: activeTabHeight
+			}, 500, function() {
+				
+				// Fade in active tab
+				activeTab.delay(50).fadeIn(250);
+				
+			});
+		});
+	});
+}
+
+function doneRoom(){
+    // Variables
+	var clickedTab = $(".tabs > .active");
+	var tabWrapper = $(".tab__content");
+	var activeTab = tabWrapper.find(".active");
+	var activeTabHeight = activeTab.outerHeight();
+	
+	// Show tab on page load
+	activeTab.show();
+	
+	// Set height of wrapper on page load
+	tabWrapper.height(activeTabHeight);
+	
+	$("#doneBtn").on("click", function() {
+		
+		// Remove class from active tab
+		$(".liCreateRoom").removeClass("active");
+		
+		// Add class active to clicked tab
+		$(".liPin").addClass("active");
+		
+		// Update clickedTab variable
+		clickedTab = $(".tabs .active");
+		
+		// fade out active tab
+		activeTab.fadeOut(250, function() {
+			
+			// Remove active class all tabs
+			$(".tab__content > li").removeClass("active");
+			
+			// Get index of clicked tab
+			var clickedTabIndex = clickedTab.index();
+
+			// Add class active to corresponding tab
+			$("#pinTab").addClass("active");
+			
+			// update new active tab
+			activeTab = $(".tab__content > .active");
+			
+			// Update variable
+			activeTabHeight = activeTab.outerHeight();
+			
+			// Animate height of wrapper to new tab height
+			tabWrapper.stop().delay(50).animate({
+				height: activeTabHeight
+			}, 500, function() {
+				
+				// Fade in active tab
+				activeTab.delay(50).fadeIn(250);
+				
+			});
+		});
+	});
+}
+
+function goBack(){
+    // Variables
+	var clickedTab = $(".tabs > .active");
+	var tabWrapper = $(".tab__content");
+	var activeTab = tabWrapper.find(".active");
+	var activeTabHeight = activeTab.outerHeight();
+	
+	// Show tab on page load
+	activeTab.show();
+	
+	// Set height of wrapper on page load
+	tabWrapper.height(activeTabHeight);
+	
+	$("#goBackBtn").on("click", function() {
+		
+		// Remove class from active tab
+		$(".liPin").removeClass("active");
+		
+		// Add class active to clicked tab
+		$(".liCreateRoom").addClass("active");
+		
+		// Update clickedTab variable
+		clickedTab = $(".tabs .active");
+		
+		// fade out active tab
+		activeTab.fadeOut(250, function() {
+			
+			// Remove active class all tabs
+			$(".tab__content > li").removeClass("active");
+			
+			// Get index of clicked tab
+			var clickedTabIndex = clickedTab.index();
+
+			// Add class active to corresponding tab
+			$("#roomCreationTab").addClass("active");
+			
+			// update new active tab
+			activeTab = $(".tab__content > .active");
 			
 			// Update variable
 			activeTabHeight = activeTab.outerHeight();

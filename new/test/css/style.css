@@ -172,6 +172,10 @@ footer {
 
 /*Todd Code*/
 
+li.noclick{
+    pointer-events: none;
+}
+
 .section-color {
   color: text-color 
   color: #81974F;

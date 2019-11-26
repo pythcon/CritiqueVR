@@ -2,13 +2,11 @@
 <html lang="en" class="bg-color">
 <head>
   <meta charset="UTF-8">
-  <title>Adaptive tabs</title>
+  <title>VReview</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/dropdown.css">
   <link rel="stylesheet" href="css/textarea.css">
-  
-  
 
 </head>
 <body>
@@ -16,10 +14,10 @@
 
 <section class="wrapper">
 	<ul class="tabs">
-		<li class="active" id="tab liWelcome">Welcome</li>
-		<li id="tab liAccount">Account</li>
-		<li id="tab liCreateRoom">Create Room</li>
-		<li id="tab liPin">Pin</li>
+		<li class="active liWelcome noclick" id="tab">Welcome</li>
+		<li id="tab" class="liAccount noclick">Account</li>
+		<li id="tab" class="liCreateRoom noclick">Create Room</li>
+		<li id="tab" class="liPin noclick">Pin</li>
 	</ul>
 
 	<ul class="tab__content">
@@ -223,7 +221,7 @@
                     </div>
                     <div class="doneBtnContainer">
                         <div class="doneBtn" id="doneBtn">
-                            <h4 onclick="TAKE TO NEXT TAB">Create Room</h4>
+                            <h4 onclick="doneRoom()">Create Room</h4>
                         </div>
                     </div>
                 </div>
@@ -265,7 +263,7 @@
                     
                     <div class="goBackContainer">
                         <div class="goBackBtn" id="goBackBtn">
-                            <h4 onclick="TAKE TO PREVIOUS TAB">Go Back</h4>
+                            <h4 onclick="goBack()">Go Back</h4>
                             <br>
                         </div>
                     </div>
