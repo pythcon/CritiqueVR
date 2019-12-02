@@ -62,12 +62,14 @@
                             <h4>Sign In</h4>
                             <br>
                             <div id="signInForm">
-                                <label>Email:</label><br>
-                                <input type="text" id="email" placeholder="example@example.com">
-                                <br>
-                                <label>Password:</label><br>
-                                <input type="password" id="password" placeholder="Password">
-                                <input type="submit">
+                                <form action="handler.php" method="post">
+                                    <label>Email:</label><br>
+                                    <input type="text" id="email" placeholder="example@example.com">
+                                    <br>
+                                    <label>Password:</label><br>
+                                    <input type="password" id="password" placeholder="Password">
+                                    <input type="submit" value="Sign In">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -77,18 +79,20 @@
                             <h4>Sign Up</h4>
                             <br>
                             <div id="signUpForm">
-                                <label>First Name:</label><br>
-                                <input type="text" id="firstName" placeholder="Johnny">
-                                <br>
-                                <label>Last Name:</label><br>
-                                <input type="text" id="lastName" placeholder="Appleseed">
-                                <br>
-                                <label>Email:</label><br>
-                                <input type="text" id="email" placeholder="example@example.com">
-                                <br>
-                                <label>Password:</label><br>
-                                <input type="password" id="password" placeholder="Password">
-                                <input type="submit" >
+                                <form action="handler_registration.php" method="post">
+                                    <label>First Name:</label><br>
+                                    <input type="text" id="firstName" placeholder="Johnny">
+                                    <br>
+                                    <label>Last Name:</label><br>
+                                    <input type="text" id="lastName" placeholder="Appleseed">
+                                    <br>
+                                    <label>Email:</label><br>
+                                    <input type="text" id="email" placeholder="example@example.com">
+                                    <br>
+                                    <label>Password:</label><br>
+                                    <input type="password" id="password" placeholder="Password">
+                                    <input type="submit" value="Sign Up">
+                                </form>
                             </div>
                         </div>
                     </div>
