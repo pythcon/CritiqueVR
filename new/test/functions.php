@@ -1,43 +1,44 @@
 <?php
+include("account.php");
 //------------------------------------------------------------------//
-    function auth ($u, $p, &$t, &$reset){
-        global $db;
-        
-        $s = "SELECT * FROM accounts WHERE email = '$u'";
-        
-        $t = mysqli_query($db, $s) or die("Error Querying Database.");
-        
-        while ( $r = mysqli_fetch_array($t,MYSQLI_ASSOC) ) {
-            $reset 				= $r[ "reset" ];
-            $resetPassword     	= $r[ "resetPassword" ];
-        }
-        
-        if ($reset){
-            $s = "SELECT * FROM accounts WHERE (email = '$u' AND resetPassword = '$p') OR (email = '$u' AND password = '$p')";
-            $t = mysqli_query($db, $s) or die("Error Querying Database.");
-        }else{
-            $s = "SELECT * FROM accounts WHERE email = '$u' AND password = '$p'";
-            $t = mysqli_query($db, $s) or die("Error Querying Database.");
-        }
-        
-        $num_rows = mysqli_num_rows($t);
-        
-        if ($num_rows>0){
-            //sets reset to false and deletes temp password
-            $s = "UPDATE accounts SET reset=NULL, resetPassword=NULL WHERE email='$u'";
-            $t = mysqli_query($db, $s) or die("Error updating reset status.");
-            return true;
-        }
-        else{
-            return false;
+    function auth ($email, $pass){
+        global $db_hostname;
+        global $db_username;
+        global $db_password;
+        global $db_project;
+        //PDO
+        $dsn = "mysql:host=$db_hostname;dbname=$db_username";
+        try {
+            $db = new PDO($dsn, $db_username, $db_password);
+            echo "Connected successfully<br>";
+            $sql = "SELECT * FROM accounts WHERE email = '$email' AND password='$pass'";
+            $q = $db->prepare($sql);
+            $q->execute();
+            $results = $q->fetchAll();
+
+            if($q->rowCount() > 0){
+                foreach ($results as $row){
+                    $_SESSION['email'] = $email;
+                    $_SESSION['firstName'] = $row['firstName'];
+                    $_SESSION['lastName'] = $row['lastName'];
+                    $_SESSION['logged'] = true;
+                }
+                return true;
+
+            }else{
+                return false;
+            } 
+            $q->closeCursor();
+
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+            exit();
         }
     }
 //--------------------------------------------------------------------//
-    function redirect($message, $targetfile, $delay){
-        global $db;
-        echo $message;
+    function redirect($targetfile){
         
-        header("refresh: $delay, url = $targetfile");
+        header("refresh: 0, url = $targetfile");
         
         exit();
     }
@@ -49,29 +50,42 @@
             echo"
             <script>
                 alert(\"Not logged in...\");
-                window.location.replace(\"/vr/index.html\");
+                window.location.replace(\"index.html\");
             </script>";
             exit();
         }
     }
-
-
 //----------------------------------------------------------------------//
-    function register ($u, $fn, $ln, $p, &$t){
-        global $db;
-        $p = md5($p);
-        $s = "INSERT INTO accounts(email, firstname, lastname, password) VALUES('$u', '$fn', '$ln', '$p')";
+    function register($email, $pass, $firstName, $lastName){
+        global $db_hostname;
+        global $db_username;
+        global $db_password;
+        global $db_project;
         
-        $t = mysqli_query($db, $s) or die("Error Querying Database.");
-        
-        $num_rows = mysqli_num_rows($t);
-        
-        if ($num_rows>0){
-            return true;
+        $dsn = "mysql:host=$db_hostname;dbname=$db_project";
+        try {
+            $db = new PDO($dsn, $db_username, $db_password);
+            $sql = "INSERT INTO accounts(email, firstname, lastname, password) VALUES('$email', '$firstName', '$lastName', '$pass')";
+            
+            $q = $db->prepare($sql);
+
+            if($q->execute() === false){
+                die('Error creating account.');
+            }
+
+            $q->closeCursor();
+
+        } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+            exit();
         }
-        else{
-            return false;
-        }
+        
+        echo "
+        <script>
+            alert(\"Account Created. Please log in.\");
+            window.location.replace(\"index.html\");
+        </script>";
+        
     }
 //----------------------------------------------------------------------//
 //function mailer

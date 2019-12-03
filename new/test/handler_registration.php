@@ -29,7 +29,7 @@
     if ($bad) exit("Bad Data");
 
 //insert data into accounts table
-register($email, $firstname, $lastname, $pass, $t);
+register($email, $firstname, $lastname, $pass);
 
 echo "
 <script>
