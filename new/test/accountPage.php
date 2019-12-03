@@ -177,93 +177,93 @@
                 </div>
 			</div>
 		</li>
-        <form action="handler_createsession.php" method="post">
-            <li id="roomCreationTab">
-                <div class="content__wrapper">
-                    <div class="roomCreationInputContainer">
-                        <div class="roomCreationInfo">
-                            <h2 class="section-color">Create a room!</h2>
-                            <div class="roomCreationInfoText">
-                                This is the <input type="text" placeholder="Give it a name!" name="roomName" id="roomName"> room.
+        <li id="roomCreationTab">
+            <div class="content__wrapper">
+                <div class="roomCreationInputContainer">
+                    <div class="roomCreationInfo">
+                        <h2 class="section-color">Create a room!</h2>
+                        <div class="roomCreationInfoText">
+                            This is the <input type="text" placeholder="Give it a name!" name="roomName" id="roomName"> room.
+                            <br><br>
+                            <div class="radioPresent" id="radioPresent">
+                                <span>I am presenting my...</span>
                                 <br><br>
-                                <div class="radioPresent" id="radioPresent">
-                                    <span>I am presenting my...</span>
-                                    <br><br>
-                                    <input type="radio" name="piece" id="piece" value="1">
-                                        <label>Final Design</label>
-                                    <br>
-                                    <input type="radio" name="piece" id="piece" value="2">
-                                        <label>Concepts</label>
-                                    <br>
-                                    <input type="radio" name="piece" id="piece" value="3">
-                                        <label>Story Board</label>
-                                    <br>
-                                    <input type="radio" name="piece" id="piece" value="4">
-                                        <label>Prototype</label>
-                                </div>
+                                <input type="radio" name="piece" id="piece" value="1">
+                                    <label>Final Design</label>
                                 <br>
-                                ...because....
-                                <br><br>
-                                <div id="textAreaWrapper">
-                                    <div>
-                                        <textarea placeholder="Ex. I need to finalize my character's look." id="roomDescription" name="roomDescription" rows="6" ></textarea>  
-                                        <br>
-                                        <!--NEXT BUTTON-->
-                                        <button id="button" data-hover="Lets go!" onclick="expandFileUpload()"><div>Next</div></button>
-                                    </div>
-                                </div>
+                                <input type="radio" name="piece" id="piece" value="2">
+                                    <label>Concepts</label>
                                 <br>
+                                <input type="radio" name="piece" id="piece" value="3">
+                                    <label>Story Board</label>
+                                <br>
+                                <input type="radio" name="piece" id="piece" value="4">
+                                    <label>Prototype</label>
                             </div>
-                            <br>&nbsp;
+                            <br>
+                            ...because....
+                            <br><br>
+                            <div id="textAreaWrapper">
+                                <div>
+                                    <textarea placeholder="Ex. I need to finalize my character's look." id="roomDescription" name="roomDescription" rows="6" ></textarea>  
+                                    <br>
+                                    <!--NEXT BUTTON-->
+                                    <button id="button" data-hover="Lets go!" onclick="expandFileUpload()"><div>Next</div></button>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                        <br>&nbsp;
+                    </div>
+                </div>
+                <div class="roomCreationFileContainer">
+                    <div class="fileUploadContainer">
+                        <div class="fileUploadBtn" id="fileUploadBtn">
+                            <h4>Let's Upload Your Work</h4>
+                            <br>
+                            <div id="fileUploadForm">
+                                <label for="oneFile">File 1:&nbsp;</label>
+                                <input type="file" name="oneFile" id="oneFile">
+                                <br><br>
+                                <label for="twoFile">File 2:&nbsp;</label>
+                                <input type="file" name="twoFile" id="twoFile">
+                                <br><br>
+                                <label for="threeFile">File 3:&nbsp;</label>
+                                <input type="file" name="threeFile" id="threeFile">
+                                <br><br>
+                                <label for="fourFile">File 4:&nbsp;</label>
+                                <input type="file" name="fourFile" id="fourFile">
+                            </div>
                         </div>
                     </div>
-                    <div class="roomCreationFileContainer">
-                        <div class="fileUploadContainer">
-                            <div class="fileUploadBtn" id="fileUploadBtn">
-                                <h4>Let's Upload Your Work</h4>
-                                <br>
-                                <div id="fileUploadForm">
-                                    <label for="oneFile">File 1:&nbsp;</label>
-                                    <input type="file" name="oneFile" id="oneFile">
-                                    <br><br>
-                                    <label for="twoFile">File 2:&nbsp;</label>
-                                    <input type="file" name="twoFile" id="twoFile">
-                                    <br><br>
-                                    <label for="threeFile">File 3:&nbsp;</label>
-                                    <input type="file" name="threeFile" id="threeFile">
-                                    <br><br>
-                                    <label for="fourFile">File 4:&nbsp;</label>
-                                    <input type="file" name="fourFile" id="fourFile">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="doneBtnContainer">
-                            <div class="doneBtn" id="doneBtn" onclick="doneRoom()">
-                                <h4>Create Room</h4>
-                            </div>
+                    <div class="doneBtnContainer">
+                        <div class="doneBtn" id="doneBtn" onclick="doneRoom()">
+                            <h4>Create Room</h4>
                         </div>
                     </div>
                 </div>
-            </li>
-            <li id="pinTab">
-                <div class="content__wrapper">
-                    <div class="pinContainer">
-                        <div class="pinInfo">
-                            <div class="pinTextTop">
-                                This is what will be presented when everyone enters the room, is this ok?
-                            </div>
-                            <div class="pinTextBottom">
-                                <b>"Welcome to the ROOM NAME Room!
-                                <br><br>
-                                A virtual design review that</b> FIRST&LASTNAME <b>created!
-                                <br><br>
-                                I am presenting my</b> ROOMTYPE <b>because</b> ROOMDESCRIPTION."
-                            </div>
-                            <br>&nbsp;
+            </div>
+        </li>
+        <li id="pinTab">
+            <div class="content__wrapper">
+                <div class="pinContainer">
+                    <div class="pinInfo">
+                        <div class="pinTextTop">
+                            This is what will be presented when everyone enters the room, is this ok?
                         </div>
+                        <div class="pinTextBottom">
+                            <b>"Welcome to the ROOM NAME Room!
+                            <br><br>
+                            A virtual design review that</b> FIRST&LASTNAME <b>created!
+                            <br><br>
+                            I am presenting my</b> ROOMTYPE <b>because</b> ROOMDESCRIPTION."
+                        </div>
+                        <br>&nbsp;
                     </div>
-                    <div class="doubleCheckContainer">
-                        <div class="perfectContainer">
+                </div>
+                <div class="doubleCheckContainer">
+                    <div class="perfectContainer">
+                        <form action="handler_createsession.php" method="post">
                             <div class="perfectBtn" id="perfectBtn" onclick="expandPin()">
                                 <h4>Perfect</h4>
                                 <br>
@@ -276,18 +276,18 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
+                    </div>
 
-                        <div class="goBackContainer">
-                            <div class="goBackBtn" id="goBackBtn" onclick="goBack()">
-                                <h4>Go Back</h4>
-                                <br>
-                            </div>
+                    <div class="goBackContainer">
+                        <div class="goBackBtn" id="goBackBtn" onclick="goBack()">
+                            <h4>Go Back</h4>
+                            <br>
                         </div>
                     </div>
                 </div>
-            </li>
-        </form>
+            </div>
+        </li>
 	</ul>
 </section>
 
