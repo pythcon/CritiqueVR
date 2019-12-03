@@ -7,7 +7,7 @@ include("account.php");
         global $db_password;
         global $db_project;
         //PDO
-        $dsn = "mysql:host=$db_hostname;dbname=$db_username";
+        $dsn = "mysql:host=$db_hostname;dbname=$db_project";
         try {
             $db = new PDO($dsn, $db_username, $db_password);
             echo "Connected successfully<br>";
