@@ -88,6 +88,32 @@ include("account.php");
         
     }
 //----------------------------------------------------------------------//
+function changePassword($email, $pass){
+    global $db_hostname;
+    global $db_username;
+    global $db_password;
+    global $db_project;
+
+    $dsn = "mysql:host=$db_hostname;dbname=$db_project";
+    try {
+        $db = new PDO($dsn, $db_username, $db_password);
+        $sql = "UPDATE accounts SET password = '$pass' WHERE email = '$email'";
+
+        $q = $db->prepare($sql);
+
+        if($q->execute() === false){
+            die('Error updating password.');
+        }
+
+        $q->closeCursor();
+
+    } catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+        exit();
+    }
+}
+
+
 //function mailer
 function forgotPasswordMailer($email, &$out){
     global $db;
