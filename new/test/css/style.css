@@ -601,3 +601,7 @@ h1,h2,h3,h4{
 	background-color: #ECC261;
 }
 /*End Go Back*/
+
+a {
+    text-decoration: none;
+}

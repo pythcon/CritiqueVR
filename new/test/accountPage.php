@@ -108,7 +108,7 @@
 		</li>
 		<li id="accountTab" class="active">
 			<div class="content__wrapper">
-				<h2 class="text-color">Account</h2>
+				<h2 class="text-color"><a href="logout.php" style="text-decoration: none; color:#81974F;">Account</a></h2>
 				<div class="accountInfoContainer">
                     <div class="accountInfo">
                         <h2>Hello, <?php  echo $firstName." ".$lastName;?></h2>

@@ -3,5 +3,5 @@
     $_SESSION["logged"] = false;
     session_destroy();
     //redirect
-    header("location:/vr/index.html");
+    header("location:index.html");
 ?>
