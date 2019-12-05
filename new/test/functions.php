@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("account.php");
 //------------------------------------------------------------------//
     function auth ($email, $pass){
