@@ -50,7 +50,7 @@ include("account.php");
         if (!$_SESSION['logged']){
             echo"
             <script>
-                alert(\"Not logged in...\");
+                alert(\"Incorrect Credentials...\");
                 window.location.replace(\"index.html\");
             </script>";
             exit();
