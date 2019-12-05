@@ -1,32 +1,18 @@
 <?php
-    session_start();
-    include("account.php");
-    include("loginfunctions.php");
-    
-//error reporting code
-    error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-    ini_set('display_errors' , 1);
+session_start();
+include("account.php");
+include("functions.php");
 
 //DB Connection
-    $db = mysqli_connect($hostname, $username, $password, $project);
-
-    if (mysqli_connect_errno())
-      {	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-          exit();
-      }
-    print "Successfully connected to MySQL.<br>";
-    mysqli_select_db($db,$project);
-
-    $delay = 3;
 
 //get data
-    getData("email", $email);
-    getData("pass", $pass);
-    getData("firstname", $firstname);
-    getData("lastname", $lastname);
+$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+$pass = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+$firstName = filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_SPECIAL_CHARS);
+$lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_SPECIAL_CHARS);
 
-//check to see if data is good
-    if ($bad) exit("Bad Data");
+//hash password
+$pass = md5($pass);
 
 //insert data into accounts table
 register($email, $firstname, $lastname, $pass);
@@ -34,6 +20,6 @@ register($email, $firstname, $lastname, $pass);
 echo "
 <script>
     alert(\"Successfully Registered. Please log in.\");
-    window.location.replace(\"/vr/index.html\");
+    window.location.replace(\"index.html\");
 </script>
 ";
