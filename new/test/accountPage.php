@@ -111,7 +111,7 @@
 				<h2 class="text-color">Account</h2>
 				<div class="accountInfoContainer">
                     <div class="accountInfo">
-                        <h2 class="section-color">Hello, <?php  echo $firstName." ".$lastName;?></h2>
+                        <h2>Hello, <?php  echo $firstName." ".$lastName;?></h2>
                         <div class="accountInfoText">
                             We let you create Virtual Reality rooms to host mid or final reviews to get input, narrow down ideas or discuss the final product.
                             <br><br>
@@ -181,7 +181,7 @@
             <div class="content__wrapper">
                 <div class="roomCreationInputContainer">
                     <div class="roomCreationInfo">
-                        <h2 class="section-color">Create a room!</h2>
+                        <h2>Create a room!</h2>
                         <div class="roomCreationInfoText">
                             This is the <input type="text" placeholder="Give it a name!" name="roomName" id="roomName"> room.
                             <br><br>
