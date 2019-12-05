@@ -15,7 +15,7 @@ $lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_SPECIAL_CHARS);
 $pass = md5($pass);
 
 //insert data into accounts table
-register($email, $firstname, $lastname, $pass);
+register($email, $pass, $firstName, $lastName);
 
 echo "
 <script>
@@ -23,3 +23,4 @@ echo "
     window.location.replace(\"index.html\");
 </script>
 ";
+?>
